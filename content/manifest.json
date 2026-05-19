@@ -1,0 +1,83 @@
+{
+  "writing": {
+    "articles": [
+      {
+        "file": "energy-envelopes",
+        "title": "Energy Envelopes and Feedback Loops: Why Pacing Works When Rest Doesn't",
+        "date": "May 2026",
+        "tags": ["ME/CFS", "Systems Theory"],
+        "desc": "A systems-level explanation of why rest alone fails ME/CFS patients, and what the feedback dynamics actually suggest."
+      },
+      {
+        "file": "reader-first-intro",
+        "title": "Reader-First: Why Most Writing Begins at the Wrong End",
+        "date": "Apr 2026",
+        "tags": ["Writing", "Instruction"],
+        "desc": "The dominant writing advice is backwards for expository and instructional writing."
+      },
+      {
+        "file": "pattern-is-the-message",
+        "title": "Pattern Is the Message: On Systems Science as Meta-Discipline",
+        "date": "Mar 2026",
+        "tags": ["Systems Science"],
+        "desc": "Systems science doesn't study a domain — it studies the structure underneath all domains."
+      }
+    ],
+    "blog": []
+  },
+  "research": [
+    {
+      "file": "isrd-background-research",
+      "title": "ISRD Research Foundations",
+      "date": "2026",
+      "tags": ["Overview", "Foundations"],
+      "desc": "The theoretical lineages, empirical evidence bases, and applied frameworks that underlie all ISRD work — across biological systems, learning science, and information systems."
+    }
+  ],
+  "videos": [],
+  "software": [],
+  "courses": {
+    "ss101": "A wiki-style reference for core systems science concepts — feedback, attractors, emergence, and more.",
+    "general-systems-theory": "The foundational framework — wholeness, emergence, hierarchy, and open systems.",
+    "cybernetics": "Control, communication, and feedback in natural and engineered systems.",
+    "complexity-science": "Emergence, self-organization, attractors, and complex adaptive systems.",
+    "systems-dynamics": "Modeling and simulation of dynamic feedback systems over time.",
+    "systems-practice": "An integrated practice framework — blending the theories into a unified toolkit for building, diagnosing, and evolving complex systems."
+  },
+  "course_items": {
+    "ss101": [
+      {
+        "file": "what-is-systems-science",
+        "title": "What Is Systems Science?",
+        "tags": ["Overview", "Foundations"],
+        "desc": "An introduction to systems science as the grammar beneath all sciences — and why it matters in practice."
+      },
+      {
+        "file": "feedback-loops",
+        "title": "Feedback Loops",
+        "tags": ["Core Concepts"],
+        "desc": "Reinforcing and balancing feedback — the engine of all dynamic behavior, and how feedback structure defines attractor states."
+      },
+      {
+        "file": "emergence",
+        "title": "Emergence",
+        "tags": ["Core Concepts"],
+        "desc": "Why the whole is more than the sum of its parts, and how attractor landscapes shape emergent behavior."
+      }
+    ]
+  },
+  "products": [
+    {
+      "file": "for-creators",
+      "title": "ISRD for Digital Creators",
+      "tags": ["Attractor Engineering", "Digital Products"],
+      "desc": "Applying complex systems science to the design and development of ebooks, courses, instructional content, and other information-rich digital work."
+    }
+  ],
+  "publications": {
+    "workbooks": [],
+    "ebooks": [],
+    "tools": [],
+    "papers": []
+  }
+}
