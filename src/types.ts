@@ -16,7 +16,6 @@ export interface Manifest {
   software: ContentItem[];
   courses: Record<string, string>;
   course_items: Record<string, ContentItem[]>;
-  products: ContentItem[];
   publications: {
     workbooks: ContentItem[];
     ebooks: ContentItem[];

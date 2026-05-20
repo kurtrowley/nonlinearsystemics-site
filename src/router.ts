@@ -172,17 +172,6 @@ function routeVideos(parts: string[]): void {
   }
 }
 
-function routeProducts(parts: string[]): void {
-  const [, slug] = parts;
-  if (slug) {
-    renderMd(loadMd(`products/${slug}`), '#products');
-  } else {
-    const items = manifest.products ?? [];
-    renderList('Products', items, 'products', '#',
-      'ISRD product offerings will be listed here as they are released.');
-  }
-}
-
 function routeSoftware(parts: string[]): void {
   const [, slug] = parts;
   if (slug) {
@@ -220,7 +209,6 @@ function route(): void {
   try {
     if      (top === 'writing')      routeWriting(parts);
     else if (top === 'courses')      routeCourses(parts);
-    else if (top === 'products')     routeProducts(parts);
     else if (top === 'publications') routePublications(parts);
     else if (top === 'research')     routeResearch(parts);
     else if (top === 'videos')       routeVideos(parts);

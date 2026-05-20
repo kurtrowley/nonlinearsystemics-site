@@ -89,13 +89,15 @@
         </ul>
       </li>
 
-      <li class="has-dropdown" :class="{ open: sub === 'products' }">
-        <a href="#products"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('products')) : close()">
-          Products <span class="caret">›</span>
+      <li class="has-dropdown" :class="{ open: sub === 'applications' }">
+        <a href="#"
+           @click="isMobile() ? ($event.preventDefault(), toggleSub('applications')) : close()">
+          Applications <span class="caret">›</span>
         </a>
         <ul class="dropdown">
-          <li><a href="#products/for-creators" @click="close()">For Digital Creators</a></li>
+          <li><a href="https://creative.isrd.com" target="_blank" rel="noopener" @click="close()">ISRD Creative ↗</a></li>
+          <li><a href="https://writing.isrd.com"  target="_blank" rel="noopener" @click="close()">ISRD Writing ↗</a></li>
+          <li><a href="https://health.isrd.com"   target="_blank" rel="noopener" @click="close()">ISRD Health ↗</a></li>
         </ul>
       </li>
 
