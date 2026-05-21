@@ -36,15 +36,15 @@
   "research": {
     "systems_science_update": [
       {
-        "file": "isrd-framework",
-        "title": "The ISRD Framework",
+        "file": "attractor-engineering-framework",
+        "title": "The Attractor Engineering Framework (AEF)",
         "date": "2026",
-        "tags": ["Framework", "Systems Science"],
-        "desc": "Nine core concepts in three tiers — from the ontology of complex systems to the operators of effective intervention."
+        "tags": ["Framework", "Applied Complexity"],
+        "desc": "Applied complexity science organized for practice — synthesized from five interdisciplinary traditions into nine core concepts across three tiers, from system ontology to intervention methodology."
       },
       {
         "file": "isrd-background-research",
-        "title": "ISRD Research Foundations",
+        "title": "Research Foundations",
         "date": "2026",
         "tags": ["Overview", "Foundations"],
         "desc": "The theoretical lineages, empirical evidence bases, and applied frameworks that underlie all Nonlinear Systemics work — across biological systems, learning science, and information systems."
