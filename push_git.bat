@@ -13,6 +13,16 @@ if "%MSG%"=="" (
 
 git add .
 git commit -m "%MSG%"
+
+echo.
+echo Pulling remote changes before push...
+git pull --rebase origin main
+if errorlevel 1 (
+  echo Pull/rebase failed. Resolve conflicts, then push manually.
+  pause
+  exit /b 1
+)
+
 git push
 
 echo.
