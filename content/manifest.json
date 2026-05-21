@@ -51,6 +51,24 @@
       }
     ],
     "reader_first_writing_system": [],
+    "human_spiritual_systems": [
+      {
+        "file": "overview",
+        "title": "Human Spiritual Systems: Research Overview",
+        "date": "2026",
+        "tags": ["Overview"],
+        "desc": "Applying complex systems science to the most persistent self-organizing structures in human history — spiritual practice, ritual, meaning-making, and transcendence."
+      }
+    ],
+    "evolutionary_futurism": [
+      {
+        "file": "overview",
+        "title": "Evolutionary Futurism: Research Overview",
+        "date": "2026",
+        "tags": ["Overview"],
+        "desc": "Mapping the attractor landscape of human civilization — where current trajectories lead, what holds them in place, and where leverage might exist to shift them."
+      }
+    ],
     "complex_diseases": [
       {
         "file": "energy-envelopes",

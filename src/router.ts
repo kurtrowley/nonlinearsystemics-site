@@ -160,6 +160,8 @@ function routeResearch(parts: string[]): void {
     systems_science_update:      'Systems Science Update',
     reader_first_writing_system: 'Reader-First Writing System',
     complex_diseases:            'Complex Diseases',
+    human_spiritual_systems:     'Human Spiritual Systems',
+    evolutionary_futurism:       'Evolutionary Futurism',
   };
 
   if (slug) {
