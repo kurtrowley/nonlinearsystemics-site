@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISRD — Intervention Systems R&D</title>
-  <meta name="description" content="An applied systems science practice. The science between the sciences.">
+  <title>Nonlinear Systemics — The Science Between the Sciences</title>
+  <meta name="description" content="An applied complex systems science practice. Research, consulting, and publishing across health, learning, and civilizational systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -38,7 +38,13 @@
        :class="{ open: open }"
        @close-nav.window="close()">
 
-    <a href="#" class="nav-brand">ISRD</a>
+    <a href="#" class="nav-brand">
+      <span class="brand-top">Nonlinear</span>
+      <svg class="brand-line" width="78" height="6" viewBox="0 0 78 6" fill="none" aria-hidden="true">
+        <path d="M0,3 C13,1 19,5 32,3 C45,1 51,5 64,3 L78,3" stroke="#D4A847" stroke-width="0.8" opacity="0.45"/>
+      </svg>
+      <span class="brand-bottom">Systemics</span>
+    </a>
 
     <button class="nav-toggle"
             @click="open = !open; if (!open) sub = null"
@@ -257,9 +263,8 @@
     <canvas class="stars3" id="stars3"></canvas>
 
     <div class="hero-inner">
-      <div class="hero-eyebrow">Intervention Systems R&amp;D</div>
-      <h1 class="hero-title">ISRD</h1>
-      <p class="hero-subtitle">The science between the sciences.</p>
+      <div class="hero-eyebrow">Nonlinear Systemics</div>
+      <h1 class="hero-title">The Science Between the Sciences</h1>
       <p class="hero-statement">
         Technology keeps reorganizing civilization faster than civilization can respond.
         This is not a new problem. It is a systems problem.
@@ -267,7 +272,7 @@
       </p>
       <div class="hero-cta">
         <a href="#publications/articles/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural article</a>
-        <a href="#about" class="btn-ghost">About ISRD</a>
+        <a href="#about" class="btn-ghost">About the practice</a>
       </div>
     </div>
 
@@ -283,7 +288,7 @@
       Complex systems at every scale — from chronic illness to organizational dysfunction to civilizational drift —
       fail in recognizable ways. The failure patterns are not accidents.
       They are <strong>attractors</strong>: stable configurations maintained by feedback dynamics.
-      ISRD develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.
+      Nonlinear Systemics develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.
     </p>
   </div>
 
@@ -327,7 +332,7 @@
       </a>
       <a href="#publications/articles/for-creators" class="card" data-content-link>
         <div class="card-tag">Publications / Articles</div>
-        <h3>ISRD for Digital Creators</h3>
+        <h3>Nonlinear Systemics for Digital Creators</h3>
         <p>Applying complex systems science to the design of ebooks, courses, and other information-rich digital work.</p>
         <span class="card-link">Read the article →</span>
       </a>
@@ -341,7 +346,7 @@
         <div class="section-label">Research</div>
         <h2 class="section-title">Five active research programs</h2>
         <p class="section-intro">
-          ISRD applies a unified methodology — attractor engineering — across five research programs.
+          Five active research programs, one methodology — attractor engineering — applied across every scale of complex systems.
           Each program is a distinct application domain; all share the same complex systems framework.
           The foundational methods are documented in the Systems Science Update.
         </p>
@@ -390,11 +395,11 @@
         </div>
       </div>
       <div class="about-text">
-        <h2>About ISRD</h2>
+        <h2>About the Practice</h2>
         <p>
-          ISRD — Intervention Systems R&amp;D — is an applied systems science practice.
-          We develop the methodology for understanding, diagnosing, and steering complex systems:
-          biological, social, and technological.
+          Nonlinear Systemics is an applied complex systems science practice —
+          research, consulting, and publishing focused on understanding, diagnosing,
+          and steering nonlinear systems: biological, social, and technological.
         </p>
         <p>
           The core claim is that the most important problems of this century are
@@ -417,7 +422,7 @@
     <span class="tools-label">Tools</span>
     <span class="tools-text">
       <a href="/reader-first-app/" class="tools-link">Reader-First Writing Method App ↗</a>
-      — An interactive implementation of ISRD's instructional writing methodology.
+      — An interactive implementation of the Nonlinear Systemics instructional writing methodology.
     </span>
   </div>
 
@@ -433,19 +438,19 @@
       <div class="contact-card">
         <div class="contact-card-label">General</div>
         <div class="contact-card-purpose">Research questions, ideas, collaborations.</div>
-        <a href="mailto:kurt@isrd.com">kurt@isrd.com</a>
+        <a href="mailto:kurt@nonlinearsystemics.com">kurt@nonlinearsystemics.com</a>
       </div>
       <div class="contact-card">
         <div class="contact-card-label">Tools &amp; Support</div>
         <div class="contact-card-purpose">Help with interactive tools or publications.</div>
-        <a href="mailto:support@isrd.com">support@isrd.com</a>
+        <a href="mailto:support@nonlinearsystemics.com">support@nonlinearsystemics.com</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-brand">ISRD</div>
+    <div class="footer-brand">Nonlinear Systemics</div>
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
@@ -454,7 +459,7 @@
       <li><a href="/reader-first-app/">Writing App ↗</a></li>
     </ul>
     <div class="footer-copy">
-      © 2026 Intervention Systems R&amp;D · Kurt Rowley, PhD · isrd.com
+      © 2026 Nonlinear Systemics · Kurt Rowley, PhD · nonlinearsystemics.com
     </div>
   </footer>
 

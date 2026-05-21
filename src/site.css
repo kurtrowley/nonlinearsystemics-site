@@ -26,7 +26,8 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(44,36,22,0.08) !important;
 }
-#content-view.active + nav .nav-brand { color: var(--charcoal) !important; }
+#content-view.active + nav .brand-top   { color: var(--charcoal) !important; }
+#content-view.active + nav .brand-bottom { color: var(--terracotta) !important; }
 #content-view.active + nav .nav-toggle span { background: var(--charcoal) !important; }
 #content-view.active + nav .nav-links a { color: var(--charcoal-lt) !important; }
 #content-view.active + nav .nav-links a:hover { color: var(--terracotta) !important; }
@@ -41,7 +42,8 @@
   background: rgba(24,19,14,0.97) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.06) !important;
 }
-[data-theme="dark"] #content-view.active + nav .nav-brand { color: var(--charcoal) !important; }
+[data-theme="dark"] #content-view.active + nav .brand-top   { color: var(--charcoal) !important; }
+[data-theme="dark"] #content-view.active + nav .brand-bottom { color: var(--amber) !important; }
 [data-theme="dark"] #content-view.active + nav .nav-links a { color: var(--charcoal-lt) !important; }
 [data-theme="dark"] #content-view.active + nav .nav-links a:hover { color: var(--amber) !important; }
 [data-theme="dark"] #content-view.active + nav .dropdown { background: rgba(30,24,18,0.98) !important; }
@@ -100,13 +102,26 @@ nav.scrolled {
   box-shadow: 0 1px 0 rgba(44,36,22,0.08);
 }
 .nav-brand {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 0; text-decoration: none; line-height: 1;
+}
+.brand-top {
   font-family: 'Lora', serif;
-  font-size: 1.4rem; font-weight: 700;
-  color: white; text-decoration: none;
+  font-size: 0.92rem; font-weight: 700;
+  color: rgba(255,255,255,0.93);
   letter-spacing: 0.06em;
   transition: color 0.3s;
 }
-nav.scrolled .nav-brand { color: var(--charcoal); }
+.brand-line { display: block; margin: 2px 0; }
+.brand-bottom {
+  font-family: 'Lora', serif;
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+nav.scrolled .brand-top  { color: var(--charcoal); }
+nav.scrolled .brand-bottom { color: var(--terracotta); }
 
 .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
 .nav-links a {

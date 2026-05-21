@@ -1,12 +1,12 @@
 # Human Spiritual Systems
 
-*Research Program — ISRD | Intervention Systems R&D*
+*Research Program — Nonlinear Systemics*
 
 ---
 
 Human spiritual systems are among the most persistent, self-organizing, and behaviorally consequential structures in recorded history. Across cultures and millennia, spiritual practices — ritual, contemplation, transcendence-seeking, meaning-making — recur not as cultural accidents but as attractors: stable configurations that form because they solve real problems in the human system.
 
-This program applies ISRD's complex systems framework to understand why spiritual systems form, how they sustain themselves, what they do for individuals and collectives, and how they interact with other major systems — health, governance, knowledge, and technology.
+This program applies Nonlinear Systemics' complex systems framework to understand why spiritual systems form, how they sustain themselves, what they do for individuals and collectives, and how they interact with other major systems — health, governance, knowledge, and technology.
 
 This is not theology. It is systems analysis applied to a domain that mainstream science has often treated as either irreducible or unimportant. The evidence is that spiritual systems are neither: they are tractable through feedback modeling, attractor analysis, and network dynamics, and they are among the most consequential attractors in human civilization.
 
@@ -24,7 +24,7 @@ This is not theology. It is systems analysis applied to a domain that mainstream
 
 ## Framing
 
-The ISRD approach treats spiritual systems the same way it treats any complex adaptive system: with attractor analysis, feedback mapping, and threshold identification. The object of study is not belief content — it is structure. What maintains the pattern? What deepens or shallows the basin? What are the leverage points?
+The Nonlinear Systemics approach treats spiritual systems the same way it treats any complex adaptive system: with attractor analysis, feedback mapping, and threshold identification. The object of study is not belief content — it is structure. What maintains the pattern? What deepens or shallows the basin? What are the leverage points?
 
 Two observations motivate this program:
 
@@ -36,7 +36,7 @@ Second, the current period is anomalous. The dominant institutional spiritual sy
 
 ## Methods
 
-This program applies the ISRD framework — developed in the [Systems Science Update](/research/systems_science_update) — to spiritual phenomena:
+This program applies the framework — developed in the [Systems Science Update](/research/systems_science_update) — to spiritual phenomena:
 
 - **Attractor analysis** — Identifying the stable states spiritual systems create and maintain in individuals and communities
 - **Feedback modeling** — Mapping the reinforcing and balancing loops that sustain practice over time

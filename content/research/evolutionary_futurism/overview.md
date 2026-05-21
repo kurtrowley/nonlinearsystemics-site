@@ -1,6 +1,6 @@
 # Evolutionary Futurism
 
-*Research Program — ISRD | Intervention Systems R&D*
+*Research Program — Nonlinear Systemics*
 
 ---
 
@@ -8,7 +8,7 @@ Evolutionary futurism applies the logic of evolutionary and complex systems scie
 
 The field sits at the intersection of systems dynamics, evolutionary theory, and civilizational analysis. If civilization is modeled as a complex adaptive system evolving under selection pressure, we can ask tractable questions about where it is heading — and about what interventions could shift that trajectory before it reaches an attractor that is much harder to exit.
 
-This program brings the same methodology ISRD applies to health systems and learning systems to the largest system of all: the long-range trajectory of human civilization.
+This program brings the same methodology Nonlinear Systemics applies to health systems and learning systems to the largest system of all: the long-range trajectory of human civilization.
 
 ---
 
@@ -24,7 +24,7 @@ This program brings the same methodology ISRD applies to health systems and lear
 
 ## Framing
 
-The opening ISRD essay, [Capability Without Stewardship](/publications/articles/capability-without-stewardship), identifies the problem this program formally investigates: technology keeps reorganizing civilization faster than civilization can respond. That gap is not a policy failure or a political failure — it is a systems structure problem. Governance, culture, and institutional design are all lagging attractors relative to technological capability.
+The opening article, [Capability Without Stewardship](/publications/articles/capability-without-stewardship), identifies the problem this program formally investigates: technology keeps reorganizing civilization faster than civilization can respond. That gap is not a policy failure or a political failure — it is a systems structure problem. Governance, culture, and institutional design are all lagging attractors relative to technological capability.
 
 Evolutionary futurism takes that diagnosis and asks the next question: given the current attractor landscape, what futures are accessible? What is the shape of the possibility space? And what would it take — structurally, not politically — to shift the trajectory toward configurations that are more stable, more humane, and more capable of sustaining complexity over the long term?
 
@@ -34,7 +34,7 @@ This is not optimism or pessimism. It is systems analysis.
 
 ## Methods
 
-This program applies the ISRD framework — developed in the [Systems Science Update](/research/systems_science_update) — to long-range civilizational analysis:
+This program applies the framework — developed in the [Systems Science Update](/research/systems_science_update) — to long-range civilizational analysis:
 
 - **Attractor engineering at civilizational scale** — What holds current trajectories in place, and where are the leverage points?
 - **Evolutionary modeling** — Applying selection, variation, and retention logic to cultural and institutional evolution

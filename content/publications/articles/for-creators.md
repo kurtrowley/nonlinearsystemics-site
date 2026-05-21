@@ -1,10 +1,10 @@
-# ISRD for Digital Creators
+# Nonlinear Systemics for Digital Creators
 
 **Applying complex systems science to the design and development of digital products.**
 
 Most digital products fail not because they lack effort or expertise, but because they were built without a systems view of the audience, the offer, or the path to adoption. The problem is structural. The fix is architectural.
 
-ISRD applies its core analytical methods to the design of information-rich and story-rich digital work — ebooks, courses, instructional content, entertainment products, and business communication. The method is called **Attractor Engineering**.
+Nonlinear Systemics applies its core analytical methods to the design of information-rich and story-rich digital work — ebooks, courses, instructional content, entertainment products, and business communication. The method is called **Attractor Engineering**.
 
 ---
 
@@ -20,7 +20,7 @@ Attractor Engineering is the corrective. It is a practical analytical method, de
 
 ## The Method: Attractor Engineering
 
-Attractor Engineering is ISRD's applied method for digital product design. It draws on the same theoretical lineages that underlie all ISRD work — general systems theory, cybernetics, complexity science, and systems dynamics — but is applied specifically to the architecture of information and story products.
+Attractor Engineering is ISRD's applied method for digital product design. It draws on the same theoretical lineages that underlie all Nonlinear Systemics work — general systems theory, cybernetics, complexity science, and systems dynamics — but is applied specifically to the architecture of information and story products.
 
 ### Core Concepts
 
@@ -40,7 +40,7 @@ The dynamics that operate at the level of a single paragraph or lesson tend to m
 
 ## The Six-Phase Process
 
-ISRD applies Attractor Engineering through a structured six-phase process. The phases are analytical, not bureaucratic — the goal is clarity, not compliance.
+Nonlinear Systemics applies Attractor Engineering through a structured six-phase process. The phases are analytical, not bureaucratic — the goal is clarity, not compliance.
 
 **1. Systems Mapping**
 Chart the territory. Identify the components, connections, and implicit rules governing the product space: what the audience is, what it already tends toward, how the domain is structured, and what competing attractors exist.
@@ -79,10 +79,10 @@ The method is format-agnostic. What matters is whether there is an audience, a b
 
 ## How to Engage
 
-ISRD works with creators, experts, and organizations at various levels of engagement — from consulting and analysis through full product development partnership.
+Nonlinear Systemics works with creators, experts, and organizations at various levels of engagement — from consulting and analysis through full product development partnership.
 
 If you are building a digital product and want to apply this framework, the best starting point is a direct conversation.
 
-**Contact:** [kurt@isrd.com](mailto:kurt@isrd.com)
+**Contact:** [kurt@nonlinearsystemics.com](mailto:kurt@nonlinearsystemics.com)
 
-*See also the [Reader-First Writing Method app](#software) — an ISRD tool that applies a related framework to the writing process itself.*
+*See also the [Reader-First Writing Method app](#software) — a Nonlinear Systemics tool that applies a related framework to the writing process itself.*

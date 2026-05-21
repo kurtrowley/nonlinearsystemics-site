@@ -72,13 +72,13 @@ More importantly: you can recognize dynamics *before* they unfold. Positive feed
 
 These are not predictions about specific events. They are structural predictions — claims about what classes of systems do, regardless of their domain.
 
-## Systems Science at ISRD
+## The Nonlinear Systemics Research Program
 
-This is what the ISRD research program is built around: identifying the structural patterns that connect systems science, learning science, health science, and the design of software and practice.
+This is what Nonlinear Systemics is built around: identifying the structural patterns that connect systems science, learning science, health science, and the design of software and practice.
 
 The same feedback architecture that explains ME/CFS energy crashes explains learning overload, organizational burnout, and market panics. The same stock-and-flow logic that models ecosystem dynamics models knowledge accumulation and cognitive depletion.
 
-The pattern is the message. ISRD is here to read it.
+The pattern is the message. This practice exists to read it.
 
 ---
 

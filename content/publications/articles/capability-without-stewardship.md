@@ -2,7 +2,7 @@
 
 *Technology keeps reorganizing civilization faster than civilization can respond. This is not a new problem. It is a systems problem. And it finally has a science.*
 
-*— ISRD | Intervention Systems R&D*
+*— Nonlinear Systemics*
 
 ---
 
@@ -62,9 +62,9 @@ This is the gap that systems science exists to close. Not by replacing the disci
 
 ---
 
-ISRD was built to work in that gap.
+Nonlinear Systemics was built to work in that gap.
 
-The name is a legacy — Intervention Systems R&D — carrying forward a lineage of work in instructional systems and applied methodology. The scope has expanded to match the problem. What we are developing, and what every ISRD project draws on, is a methodology for attractor engineering: the systematic process of identifying what holds a harmful system pattern in place, finding the leverage points where it is most susceptible to movement, and designing intervention sequences that shift it toward a healthier configuration.
+The methodology we develop and apply is attractor engineering: the systematic process of identifying what holds a harmful system pattern in place, finding the leverage points where it is most susceptible to movement, and designing intervention sequences that shift it toward a healthier configuration.
 
 The problems we work on — chronic disease that persists because the physiological systems maintaining it are organized to maintain themselves; social and political fragility that persists because the institutional structures that could resolve it are themselves stuck in dysfunctional attractor states; technological governance that fails because the governance systems are calibrated for a complexity level the technologies have long since exceeded — all have the same structural feature. They are not problems that more information, more resources, or more compliance will solve. They are attractor problems. And attractor problems require attractor engineering.
 
@@ -74,6 +74,6 @@ Deploying them is the work.
 
 ---
 
-*ISRD — Intervention Systems R&D | isrd.com*
+*Nonlinear Systemics | nonlinearsystemics.com*
 
 *The science between the sciences.*

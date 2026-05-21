@@ -8,13 +8,13 @@ This document describes the research context that underlies all ISRD work — th
 
 ## The Cross-Domain Research Problem
 
-ISRD was founded on a simple observation: the same structural patterns appear across radically different fields, but because science is organized by domain, no single field can see them in full. A mechanism that explains ME/CFS energy crashes also explains learning overload and organizational burnout. A framework that models ecological tipping points also models institutional collapse and physiological threshold effects.
+Nonlinear Systemics was founded on a simple observation: the same structural patterns appear across radically different fields, but because science is organized by domain, no single field can see them in full. A mechanism that explains ME/CFS energy crashes also explains learning overload and organizational burnout. A framework that models ecological tipping points also models institutional collapse and physiological threshold effects.
 
-The research agenda at ISRD is therefore cross-domain by design. The goal is not to produce research within any single discipline — it is to identify the structural patterns that connect them, and to translate those patterns into actionable tools for practitioners, researchers, and organizations working with complex problems.
+The research agenda is therefore cross-domain by design. The goal is not to produce research within any single discipline — it is to identify the structural patterns that connect them, and to translate those patterns into actionable tools for practitioners, researchers, and organizations working with complex problems.
 
 ## Theoretical Foundations
 
-ISRD draws on five major theoretical traditions in systems science:
+The practice draws on five major theoretical traditions in systems science:
 
 **General Systems Theory (GST)** — Bertalanffy's project of identifying universal principles of organized complexity: wholeness, emergence, hierarchy, equifinality, and open system dynamics. GST provides the ontological framework — the basic vocabulary for what a system is and how it behaves at multiple levels of organization.
 
@@ -54,7 +54,7 @@ Core research questions:
 
 The third research area examines software systems as a domain of applied systems science — both as an object of study and as a source of transferable insight.
 
-Software engineers who build and maintain large-scale systems develop a structural intuition about system behavior that the other traditions lack: they have direct experience with how feedback loops introduce bugs, how information flow degradation produces system failure, and how architecture shapes the space of possible behaviors. ISRD research examines how this intuition can be formalized and transferred.
+Software engineers who build and maintain large-scale systems develop a structural intuition about system behavior that the other traditions lack: they have direct experience with how feedback loops introduce bugs, how information flow degradation produces system failure, and how architecture shapes the space of possible behaviors. The research here examines how this intuition can be formalized and transferred.
 
 Research questions include:
 - What systems science concepts map cleanly onto software architecture patterns, and what can each tradition learn from the other?
@@ -67,10 +67,10 @@ These three domains — biological systems, learning systems, and information sy
 
 They are all **feedback-regulated systems with attractor dynamics**, operating across multiple scales, subject to delay, capable of threshold effects and collapse, and resistant to naive intervention. The principles that govern why ME/CFS is so hard to treat also govern why organizational change is so hard to sustain, and why software systems accumulate technical debt in predictable ways.
 
-ISRD's research program is organized around this structural core — not as metaphor, but as formal claim: the same systems science tools that clarify one domain clarify all three.
+The Nonlinear Systemics research program is organized around this structural core — not as metaphor, but as formal claim: the same systems science tools that clarify one domain clarify all three.
 
 ---
 
 *This is a working document. Research project pages will be added as specific projects are initiated and reach a stage suitable for public description.*
 
-*Related reading: [Systems Science as Meta-Discipline](#writing/articles/pattern-is-the-message) · [Energy Envelopes and Feedback Loops](#writing/articles/energy-envelopes) · [What Is Systems Science?](#courses/ss101/what-is-systems-science)*
+*Related reading: [Systems Science as Meta-Discipline](#publications/articles/pattern-is-the-message) · [Energy Envelopes and Feedback Loops](#research/complex_diseases/energy-envelopes) · [What Is Systems Science?](#publications/courses/ss101/what-is-systems-science)*

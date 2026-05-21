@@ -2,11 +2,11 @@
 
 *Nine core concepts organized in three tiers — from the ontology of complex systems to the operators of effective intervention.*
 
-*— ISRD | Intervention Systems R&D*
+*— Nonlinear Systemics*
 
 ---
 
-Complex systems science has produced, over seven decades, a rigorous account of why difficult problems are difficult. Not difficult in the sense of technically demanding — difficult in the sense of resistant to straightforward solution. The ISRD framework organizes the conceptual tools of that science into three tiers, each answering a different question about complex systems.
+Complex systems science has produced, over seven decades, a rigorous account of why difficult problems are difficult. Not difficult in the sense of technically demanding — difficult in the sense of resistant to straightforward solution. This framework organizes the conceptual tools of that science into three tiers, each answering a different question about complex systems.
 
 **Tier 1** asks: what are the fundamental entities and structures of complex systems?
 
@@ -80,7 +80,7 @@ The distinction matters for intervention because resilience and robustness are n
 
 ---
 
-## Attractor Engineering: The ISRD Methodology
+## Attractor Engineering: The Nonlinear Systemics Methodology
 
 The three tiers together define a practice: attractor engineering.
 
@@ -93,10 +93,10 @@ Attractor engineering is the systematic methodology for:
 5. **Deploying** — executing the intervention with monitoring built in from the start
 6. **Monitoring and evolving** — detecting the system's adaptive response and adjusting the intervention accordingly
 
-The methodology applies across ISRD's three practice domains: health systems (biological attractors), learning systems (cognitive and institutional attractors), and information systems (technological and social attractors).
+The methodology applies across the practice's research domains: health systems (biological attractors), learning systems (cognitive and institutional attractors), and information systems (technological and social attractors).
 
 ---
 
-*ISRD — Intervention Systems R&D | isrd.com*
+*Nonlinear Systemics | nonlinearsystemics.com*
 
 *The science between the sciences.*
