@@ -200,12 +200,13 @@ nav.scrolled .dropdown li a:hover { color: var(--terracotta) !important; backgro
   max-width: 820px;
 }
 .hero-eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
   font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--amber); margin-bottom: 1.6rem;
-  border-bottom: 1px solid rgba(212,168,71,0.4);
-  padding-bottom: 0.4rem;
 }
 .hero-title {
   font-family: 'Lora', serif;
