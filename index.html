@@ -31,7 +31,6 @@
        x-data="{
          open: false,
          sub: null,
-         isMobile() { return window.innerWidth <= 768; },
          close()    { this.open = false; this.sub = null; },
          toggleSub(name) { this.sub = this.sub === name ? null : name; }
        }"
@@ -58,7 +57,7 @@
 
       <li class="has-dropdown" :class="{ open: sub === 'research' }">
         <a href="#research"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('research')) : close()">
+           @click.prevent="toggleSub('research')">
           Research <span class="caret">›</span>
         </a>
         <ul class="dropdown">
@@ -72,7 +71,7 @@
 
       <li class="has-dropdown" :class="{ open: sub === 'publications' }">
         <a href="#publications"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('publications')) : close()">
+           @click.prevent="toggleSub('publications')">
           Publications <span class="caret">›</span>
         </a>
         <ul class="dropdown">
