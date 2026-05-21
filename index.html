@@ -30,7 +30,10 @@
   <nav id="nav"
        x-data="{
          open: false,
-         close() { this.open = false; }
+         sub: null,
+         isMobile() { return window.innerWidth <= 768; },
+         close()    { this.open = false; this.sub = null; },
+         toggleSub(name) { this.sub = this.sub === name ? null : name; }
        }"
        :class="{ open: open }"
        @close-nav.window="close()">
@@ -38,17 +41,41 @@
     <a href="#" class="nav-brand">ISRD</a>
 
     <button class="nav-toggle"
-            @click="open = !open"
+            @click="open = !open; if (!open) sub = null"
             :aria-expanded="open.toString()"
             aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
 
     <ul class="nav-links">
-      <li><a href="#about"        @click="close()">About</a></li>
-      <li><a href="#research"     @click="close()">Research</a></li>
-      <li><a href="#publications" @click="close()">Publications</a></li>
-      <li><a href="#contact"      @click="close()">Contact</a></li>
+      <li><a href="#about" @click="close()">About</a></li>
+
+      <li class="has-dropdown" :class="{ open: sub === 'research' }">
+        <a href="#research"
+           @click="isMobile() ? ($event.preventDefault(), toggleSub('research')) : close()">
+          Research <span class="caret">›</span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#research/systems_science_update"      @click="close()">Systems Science Update</a></li>
+          <li><a href="#research/reader_first_writing_system" @click="close()">Reader-First Writing System</a></li>
+          <li><a href="#research/complex_diseases"            @click="close()">Complex Diseases</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown" :class="{ open: sub === 'publications' }">
+        <a href="#publications"
+           @click="isMobile() ? ($event.preventDefault(), toggleSub('publications')) : close()">
+          Publications <span class="caret">›</span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#publications/articles"      @click="close()">Articles</a></li>
+          <li><a href="#publications/blog"          @click="close()">Blog</a></li>
+          <li><a href="#publications/ebooks"        @click="close()">eBooks</a></li>
+          <li><a href="#publications/courses"       @click="close()">Courses</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#contact" @click="close()">Contact</a></li>
       <li>
         <button id="theme-toggle" class="nav-theme-btn" aria-label="Toggle theme">☾</button>
       </li>
@@ -237,7 +264,7 @@
         And it finally has a science.
       </p>
       <div class="hero-cta">
-        <a href="#writing/analyses/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural essay</a>
+        <a href="#publications/articles/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural essay</a>
         <a href="#about" class="btn-ghost">About ISRD</a>
       </div>
     </div>
@@ -264,7 +291,7 @@
     <h2 class="section-title">Analyses, frameworks, and applied research</h2>
 
     <!-- Lead essay — full-width featured card -->
-    <a href="#writing/analyses/capability-without-stewardship"
+    <a href="#publications/articles/capability-without-stewardship"
        class="featured-essay"
        data-content-link>
       <div class="essay-meta">
@@ -284,19 +311,19 @@
 
     <!-- Secondary publications grid -->
     <div class="cards pub-cards">
-      <a href="#research/isrd-framework" class="card" data-content-link>
+      <a href="#research/systems_science_update/isrd-framework" class="card" data-content-link>
         <div class="card-tag">Framework · Systems Science</div>
         <h3>The ISRD Framework</h3>
         <p>Nine core concepts in three tiers — from the ontology of complex systems to the operators of effective intervention.</p>
         <span class="card-link">Read the framework →</span>
       </a>
-      <a href="#writing/articles/pattern-is-the-message" class="card" data-content-link>
+      <a href="#publications/articles/pattern-is-the-message" class="card" data-content-link>
         <div class="card-tag">Essay · Systems Science</div>
         <h3>Pattern Is the Message</h3>
         <p>Systems science doesn't study a domain — it studies the structure underneath all domains. Why that matters.</p>
         <span class="card-link">Read the essay →</span>
       </a>
-      <a href="#writing/articles/energy-envelopes" class="card" data-content-link>
+      <a href="#research/complex_diseases/energy-envelopes" class="card" data-content-link>
         <div class="card-tag">Research · Health Systems</div>
         <h3>Energy Envelopes and Feedback Loops</h3>
         <p>A systems-level explanation of why rest alone fails ME/CFS patients, and what the feedback dynamics actually suggest.</p>
@@ -317,7 +344,7 @@
           methodology — attractor engineering — across biological systems,
           learning systems, and information systems.
         </p>
-        <a href="#research/isrd-framework" class="btn-outline" data-content-link>Read the framework →</a>
+        <a href="#research/systems_science_update/isrd-framework" class="btn-outline" data-content-link>Read the framework →</a>
       </div>
       <div class="research-tiers">
         <div class="tier">

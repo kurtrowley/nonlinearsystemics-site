@@ -99,99 +99,96 @@ function renderLanding(
 
 // ── Section routers ───────────────────────────────────────────────────────────
 
-function routeWriting(parts: string[]): void {
+function routePublicationsSection(parts: string[]): void {
+  // #publications/articles, #publications/blog, #publications/ebooks
+  // #publications/articles/some-slug
   const [, sub, slug] = parts;
   if (slug) {
-    renderMd(loadMd(`writing/${sub}/${slug}`), `#writing/${sub}`);
+    renderMd(loadMd(`publications/${sub}/${slug}`), `#publications/${sub}`);
   } else if (sub) {
-    const items = (manifest.writing as Record<string, ContentItem[]>)[sub] ?? [];
+    const items = (manifest.publications as Record<string, ContentItem[]>)[sub] ?? [];
     const labels: Record<string, string> = {
-      analyses: 'Analyses & Essays',
       articles: 'Articles',
-      blog: 'Blog Posts',
+      blog: 'Blog',
+      ebooks: 'eBooks',
     };
-    renderList(labels[sub] ?? toTitle(sub), items, `writing/${sub}`, '#publications');
+    renderList(labels[sub] ?? toTitle(sub), items, `publications/${sub}`, '#publications');
   } else {
     renderLanding('Publications', [
-      { href: '#writing/analyses', title: 'Analyses & Essays',
-        desc: 'Think tank essays and analyses on systems science and civilizational dynamics.' },
-      { href: '#writing/articles', title: 'Articles',
+      { href: '#publications/articles', title: 'Articles',
         desc: 'Long-form research and analysis across systems science and applied domains.' },
-      { href: '#writing/blog', title: 'Blog Posts',
+      { href: '#publications/blog', title: 'Blog',
         desc: 'Shorter observations, notes, and work-in-progress thinking.' },
+      { href: '#publications/ebooks', title: 'eBooks',
+        desc: 'Digital books and extended guides.' },
+      { href: '#publications/courses', title: 'Courses',
+        desc: 'Structured learning sequences across systems science disciplines.' },
     ], '');
   }
 }
 
 function routeCourses(parts: string[]): void {
-  const [, course, slug] = parts;
+  // #publications/courses, #publications/courses/ss101, #publications/courses/ss101/feedback-loops
+  const [,, course, slug] = parts;   // parts[0]='publications', parts[1]='courses'
   if (slug) {
-    renderMd(loadMd(`courses/${course}/${slug}`), `#courses/${course}`);
+    renderMd(loadMd(`publications/courses/${course}/${slug}`), `#publications/courses/${course}`);
   } else if (course) {
     const items = manifest.course_items?.[course];
     if (items) {
       const labels: Record<string, string> = { ss101: 'Systems Science 101' };
-      renderList(labels[course] ?? toTitle(course), items, `courses/${course}`, '#courses');
+      renderList(labels[course] ?? toTitle(course), items, `publications/courses/${course}`, '#publications/courses');
     } else {
-      renderMd(loadMd(`courses/${course}/overview`), '#courses');
+      renderMd(loadMd(`publications/courses/${course}/overview`), '#publications/courses');
     }
   } else {
     const tiles = Object.entries(manifest.courses ?? {}).map(([s, desc]) => ({
-      href: '#courses/' + s,
+      href: '#publications/courses/' + s,
       title: s === 'ss101' ? 'Systems Science 101' : toTitle(s),
       desc: typeof desc === 'string' ? desc : '',
     }));
-    renderLanding('Courses', tiles, '');
-  }
-}
-
-function routePublications(parts: string[]): void {
-  const [, sub] = parts;
-  const cats = ['workbooks', 'ebooks', 'tools', 'papers'];
-  if (sub) {
-    const items = (manifest.publications as Record<string, ContentItem[]>)[sub] ?? [];
-    renderList(toTitle(sub), items, `publications/${sub}`, '#publications');
-  } else {
-    renderLanding('Publications', cats.map(c => ({
-      href: '#publications/' + c, title: toTitle(c), desc: '',
-    })), '');
+    renderLanding('Courses', tiles, '#publications');
   }
 }
 
 function routeResearch(parts: string[]): void {
-  const [, slug] = parts;
-  if (slug) {
-    renderMd(loadMd(`research/${slug}`), '#research');
-  } else {
-    renderList('Research', manifest.research ?? [], 'research', '#',
-      'Research project documents will be added here as work develops.');
-  }
-}
+  // #research                          → landing with three tiles
+  // #research/systems_science_update   → list of items in that subdir
+  // #research/systems_science_update/isrd-framework → render md
+  const [, subdir, slug] = parts;
 
-function routeVideos(parts: string[]): void {
-  const [, slug] = parts;
-  if (slug) {
-    renderMd(loadMd(`videos/${slug}`), '#videos');
-  } else {
-    renderList('Videos', manifest.videos ?? [], 'videos', '#',
-      'Video essays and demonstrations will appear here as they are produced.');
-  }
-}
+  const subdirLabels: Record<string, string> = {
+    systems_science_update:      'Systems Science Update',
+    reader_first_writing_system: 'Reader-First Writing System',
+    complex_diseases:            'Complex Diseases',
+  };
 
-function routeSoftware(parts: string[]): void {
-  const [, slug] = parts;
   if (slug) {
-    renderMd(loadMd(`software/${slug}`), '#software');
+    renderMd(loadMd(`research/${subdir}/${slug}`), `#research/${subdir}`);
+  } else if (subdir) {
+    const items = (manifest.research as Record<string, ContentItem[]>)[subdir] ?? [];
+    renderList(
+      subdirLabels[subdir] ?? toTitle(subdir),
+      items,
+      `research/${subdir}`,
+      '#research',
+      'Research documents will be added here as work develops.',
+    );
   } else {
-    renderList('Software', manifest.software ?? [], 'software', '#',
-      'Software documentation will be listed here as tools are released.');
+    renderLanding('Research', [
+      { href: '#research/systems_science_update',      title: 'Systems Science Update',
+        desc: 'Frameworks, foundations, and ongoing theoretical development.' },
+      { href: '#research/reader_first_writing_system', title: 'Reader-First Writing System',
+        desc: 'The cognitive and systems basis for reader-centered instructional writing.' },
+      { href: '#research/complex_diseases',            title: 'Complex Diseases',
+        desc: 'Systems modeling of chronic illness — ME/CFS, long COVID, and related conditions.' },
+    ], '');
   }
 }
 
 // ── Main router ───────────────────────────────────────────────────────────────
 
 // Hashes that correspond to sections on the main page (scroll, don't route).
-// Sub-paths like #writing/articles still route even though #writing scrolls.
+// Sub-paths like #publications/articles still route even though #publications scrolls.
 const ON_PAGE = new Set([
   '', 'about', 'contact', 'publications', 'research',
 ]);
@@ -212,12 +209,9 @@ function route(): void {
   }
 
   try {
-    if      (top === 'writing')      routeWriting(parts);
-    else if (top === 'courses')      routeCourses(parts);
-    else if (top === 'publications') routePublications(parts);
+    if      (top === 'publications' && parts[1] === 'courses') routeCourses(parts);
+    else if (top === 'publications') routePublicationsSection(parts);
     else if (top === 'research')     routeResearch(parts);
-    else if (top === 'videos')       routeVideos(parts);
-    else if (top === 'software')     routeSoftware(parts);
     else                             hideView();
   } catch (err) {
     showError((err as Error).message);
