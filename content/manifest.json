@@ -1,5 +1,14 @@
 {
   "writing": {
+    "analyses": [
+      {
+        "file": "capability-without-stewardship",
+        "title": "Capability Without Stewardship",
+        "date": "May 2026",
+        "tags": ["Technology & Civilization", "Systems Science"],
+        "desc": "Technology keeps reorganizing civilization faster than civilization can respond. This is not a new problem. It is a systems problem. And it finally has a science."
+      }
+    ],
     "articles": [
       {
         "file": "energy-envelopes",
@@ -26,6 +35,13 @@
     "blog": []
   },
   "research": [
+    {
+      "file": "isrd-framework",
+      "title": "The ISRD Framework",
+      "date": "2026",
+      "tags": ["Framework", "Systems Science"],
+      "desc": "Nine core concepts in three tiers — from the ontology of complex systems to the operators of effective intervention."
+    },
     {
       "file": "isrd-background-research",
       "title": "ISRD Research Foundations",

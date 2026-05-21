@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ISRD — Intervention Systems R&D</title>
+  <meta name="description" content="An applied systems science practice. The science between the sciences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 </head>
 <body>
 
-  <!-- CONTENT VIEW -->
+  <!-- CONTENT VIEW — full-page overlay for reading articles/essays -->
   <div id="content-view">
     <div class="cv-bar">
       <a href="#" id="back-btn">Back</a>
@@ -25,16 +26,11 @@
     <div id="content-body"></div>
   </div>
 
-  <!-- NAV — state managed by Alpine.js -->
-  <!-- open: mobile menu; sub: which dropdown is expanded on mobile -->
-  <!-- Desktop dropdowns are CSS :hover; Alpine only manages mobile click state -->
+  <!-- NAV — Alpine.js manages mobile state; desktop is CSS :hover -->
   <nav id="nav"
        x-data="{
          open: false,
-         sub: null,
-         isMobile() { return window.innerWidth <= 768; },
-         close()    { this.open = false; this.sub = null; },
-         toggleSub(name) { this.sub = this.sub === name ? null : name; }
+         close() { this.open = false; }
        }"
        :class="{ open: open }"
        @close-nav.window="close()">
@@ -42,80 +38,19 @@
     <a href="#" class="nav-brand">ISRD</a>
 
     <button class="nav-toggle"
-            @click="open = !open; if (!open) sub = null"
+            @click="open = !open"
             :aria-expanded="open.toString()"
             aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
 
     <ul class="nav-links">
-      <li><a href="#research" @click="close()">Research</a></li>
-      <li><a href="#videos"   @click="close()">Videos</a></li>
-
-      <li class="has-dropdown" :class="{ open: sub === 'writing' }">
-        <a href="#writing"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('writing')) : close()">
-          Writing <span class="caret">›</span>
-        </a>
-        <ul class="dropdown">
-          <li><a href="#writing/articles" @click="close()">Articles</a></li>
-          <li><a href="#writing/blog"     @click="close()">Blog Posts</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#software" @click="close()">Software</a></li>
-
-      <li class="has-dropdown" :class="{ open: sub === 'publications' }">
-        <a href="#publications"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('publications')) : close()">
-          Publications <span class="caret">›</span>
-        </a>
-        <ul class="dropdown">
-          <li><a href="#publications/workbooks" @click="close()">Workbooks</a></li>
-          <li><a href="#publications/ebooks"    @click="close()">eBooks</a></li>
-          <li><a href="#publications/tools"     @click="close()">Systems Science Tools</a></li>
-          <li><a href="#publications/papers"    @click="close()">Papers &amp; Reports</a></li>
-        </ul>
-      </li>
-
-      <li class="has-dropdown" :class="{ open: sub === 'courses' }">
-        <a href="#courses"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('courses')) : close()">
-          Courses <span class="caret">›</span>
-        </a>
-        <ul class="dropdown">
-          <li><a href="#courses/ss101" @click="close()">Systems Science 101</a></li>
-          <li><a href="#courses"       @click="close()">All Courses</a></li>
-        </ul>
-      </li>
-
-      <li class="has-dropdown" :class="{ open: sub === 'applications' }">
-        <a href="#"
-           @click="isMobile() ? ($event.preventDefault(), toggleSub('applications')) : close()">
-          Applications <span class="caret">›</span>
-        </a>
-        <ul class="dropdown">
-          <li><a href="https://creative.isrd.com" target="_blank" rel="noopener" @click="close()">ISRD Creative ↗</a></li>
-          <li><a href="https://writing.isrd.com"  target="_blank" rel="noopener" @click="close()">ISRD Writing ↗</a></li>
-          <li><a href="https://health.isrd.com"   target="_blank" rel="noopener" @click="close()">ISRD Health ↗</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#about"    @click="close()">About</a></li>
-      <li><a href="#contact"  @click="close()">Contact</a></li>
-
-      <li class="has-dropdown" :class="{ open: sub === 'settings' }">
-        <a href="#" @click.prevent="toggleSub('settings')">
-          Settings <span class="caret">›</span>
-        </a>
-        <ul class="dropdown settings-panel">
-          <li>
-            <div class="settings-row">
-              <span class="settings-label">Theme</span>
-              <button id="theme-toggle">☾ Dark</button>
-            </div>
-          </li>
-        </ul>
+      <li><a href="#about"        @click="close()">About</a></li>
+      <li><a href="#research"     @click="close()">Research</a></li>
+      <li><a href="#publications" @click="close()">Publications</a></li>
+      <li><a href="#contact"      @click="close()">Contact</a></li>
+      <li>
+        <button id="theme-toggle" class="nav-theme-btn" aria-label="Toggle theme">☾</button>
       </li>
     </ul>
   </nav>
@@ -295,14 +230,15 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Intervention Systems R&amp;D</div>
       <h1 class="hero-title">ISRD</h1>
-      <p class="hero-subtitle">The science between the sciences</p>
-      <p class="hero-desc">
-        An applied systems R&amp;D practice — solving complex problems
-        in health, learning, technology, and human performance.
+      <p class="hero-subtitle">The science between the sciences.</p>
+      <p class="hero-statement">
+        Technology keeps reorganizing civilization faster than civilization can respond.
+        This is not a new problem. It is a systems problem.
+        And it finally has a science.
       </p>
       <div class="hero-cta">
-        <a href="#featured" class="btn-primary">Explore the Work</a>
-        <a href="#writing" class="btn-ghost">Recent Writing</a>
+        <a href="#writing/analyses/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural essay</a>
+        <a href="#about" class="btn-ghost">About ISRD</a>
       </div>
     </div>
 
@@ -312,89 +248,103 @@
     </div>
   </section>
 
-  <!-- IDENTITY STRIP -->
+  <!-- POSITION STRIP -->
   <div class="identity">
     <p>
-      ISRD publishes <strong>articles, blogs, ebooks, and courses</strong> that share its methods —
-      and develops practical tools and products that put applied systems science
-      directly into the hands of practitioners.
+      The gap between what civilization can <strong>do</strong> and what it can <strong>govern</strong>
+      is not a policy problem or a technology problem.
+      It is a <strong>systems structure problem</strong> —
+      and systems structure problems require systems science to diagnose and systems design to fix.
     </p>
   </div>
 
-  <!-- EXPLORE -->
-  <section class="explore" id="explore">
-    <div class="section-label">What's Here</div>
-    <h2 class="section-title">Six ways to engage with the work</h2>
-    <div class="explore-grid">
-      <a href="#research" class="explore-tile">
-        <div class="explore-icon">🔬</div>
-        <h3>Research</h3>
-        <p>Systems theory, ME/CFS, instructional science, and evolving models across disciplines.</p>
-        <span class="tile-status">Active</span>
+  <!-- FEATURED PUBLICATION -->
+  <section class="featured" id="publications">
+    <div class="section-label">Publications</div>
+    <h2 class="section-title">Analyses, frameworks, and applied research</h2>
+
+    <!-- Lead essay — full-width featured card -->
+    <a href="#writing/analyses/capability-without-stewardship"
+       class="featured-essay"
+       data-content-link>
+      <div class="essay-meta">
+        <span class="essay-tag">Essay · Technology &amp; Civilization</span>
+        <span class="essay-date">May 2026</span>
+      </div>
+      <h3 class="essay-title">Capability Without Stewardship</h3>
+      <p class="essay-sub">Technology keeps reorganizing civilization faster than civilization can respond. This is not a new problem. It is a systems problem. And it finally has a science.</p>
+      <p class="essay-body">
+        In 1963, a group of mid-century intellectuals asked a question that turned out to be premature by sixty years.
+        Raymond Aron, Robert Oppenheimer, and George Kennan were not asking whether technology was good or bad —
+        they were asking what technology <em>does</em> to the social order. They were right then.
+        The diagnosis has been correct for sixty years. The response still hasn't arrived at the necessary scale.
+      </p>
+      <span class="essay-link">Read the essay →</span>
+    </a>
+
+    <!-- Secondary publications grid -->
+    <div class="cards pub-cards">
+      <a href="#research/isrd-framework" class="card" data-content-link>
+        <div class="card-tag">Framework · Systems Science</div>
+        <h3>The ISRD Framework</h3>
+        <p>Nine core concepts in three tiers — from the ontology of complex systems to the operators of effective intervention.</p>
+        <span class="card-link">Read the framework →</span>
       </a>
-      <a href="#videos" class="explore-tile">
-        <div class="explore-icon">🎬</div>
-        <h3>Videos</h3>
-        <p>Popular science explainers on hot topics — reframed through a systems science lens.</p>
-        <span class="tile-status">Coming</span>
+      <a href="#writing/articles/pattern-is-the-message" class="card" data-content-link>
+        <div class="card-tag">Essay · Systems Science</div>
+        <h3>Pattern Is the Message</h3>
+        <p>Systems science doesn't study a domain — it studies the structure underneath all domains. Why that matters.</p>
+        <span class="card-link">Read the essay →</span>
       </a>
-      <a href="#writing" class="explore-tile">
-        <div class="explore-icon">✍️</div>
-        <h3>Writing</h3>
-        <p>Articles, blog posts, and Systems Science 101 — a wiki-style guide to the core ontology.</p>
-        <span class="tile-status">Active</span>
-      </a>
-      <a href="#software" class="explore-tile">
-        <div class="explore-icon">⚙️</div>
-        <h3>Software</h3>
-        <p>AI-powered tools — a Systems Science Sandbox and the Reader-First Writing Method app.</p>
-        <span class="tile-status">In Development</span>
-      </a>
-      <a href="#publications" class="explore-tile">
-        <div class="explore-icon">📚</div>
-        <h3>Publications</h3>
-        <p>Workbooks, eBooks, tools, and papers for independent study and applied practice.</p>
-        <span class="tile-status">Coming</span>
-      </a>
-      <a href="#courses" class="explore-tile">
-        <div class="explore-icon">🎓</div>
-        <h3>Courses</h3>
-        <p>eLearning from core systems theory to domain applications — with certificate tracks.</p>
-        <span class="tile-status">In Development</span>
+      <a href="#writing/articles/energy-envelopes" class="card" data-content-link>
+        <div class="card-tag">Research · Health Systems</div>
+        <h3>Energy Envelopes and Feedback Loops</h3>
+        <p>A systems-level explanation of why rest alone fails ME/CFS patients, and what the feedback dynamics actually suggest.</p>
+        <span class="card-link">Read the analysis →</span>
       </a>
     </div>
   </section>
 
-  <!-- FEATURED WORK -->
-  <section class="featured" id="featured">
-    <div class="section-label">Featured Work</div>
-    <h2 class="section-title">Research, tools, and methods from the practice</h2>
-    <p class="section-intro">
-      Decades of work at the intersection of instructional science,
-      systems theory, and human health — now being shared openly.
-    </p>
-    <div class="cards">
-      <a href="#" class="card">
-        <div class="card-icon health">🧬</div>
-        <div class="card-tag">Health · Systems Theory</div>
-        <h3>A Systems Theory of ME/CFS</h3>
-        <p>An evolving model of myalgic encephalomyelitis as a systems-level dysregulation — connecting cellular energy, nervous system feedback, and symptom cascades.</p>
-        <span class="card-link">Read the theory →</span>
-      </a>
-      <a href="#" class="card">
-        <div class="card-icon writing">✍️</div>
-        <div class="card-tag">Method · Communication</div>
-        <h3>Reader-First Writing System</h3>
-        <p>A writing method grounded in instructional psychology: start from what the reader already knows, build toward what they need. Clearer writing, faster.</p>
-        <span class="card-link">Learn the method →</span>
-      </a>
-      <a href="#" class="card">
-        <div class="card-icon breath">🌬️</div>
-        <div class="card-tag">Practice · Pain &amp; Fatigue</div>
-        <h3>Breathing Meditations for ME/CFS</h3>
-        <p>A set of structured breathing protocols that have measurably reduced symptoms for several people with ME/CFS, chronic pain, and fatigue conditions.</p>
-        <span class="card-link">Try the practice →</span>
-      </a>
+  <!-- RESEARCH / FRAMEWORK -->
+  <section class="research-strip" id="research">
+    <div class="research-inner">
+      <div class="research-text">
+        <div class="section-label">Research</div>
+        <h2 class="section-title">Attractor engineering across three domains</h2>
+        <p class="section-intro">
+          The same feedback architecture that explains ME/CFS energy crashes explains
+          learning overload and organizational dysfunction. ISRD applies a unified
+          methodology — attractor engineering — across biological systems,
+          learning systems, and information systems.
+        </p>
+        <a href="#research/isrd-framework" class="btn-outline" data-content-link>Read the framework →</a>
+      </div>
+      <div class="research-tiers">
+        <div class="tier">
+          <div class="tier-label">Tier 1 · Core Ontology</div>
+          <ul>
+            <li>Attractors</li>
+            <li>Feedback Loops</li>
+            <li>Fractal Structure</li>
+            <li>Networks &amp; Connectivity</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <div class="tier-label">Tier 2 · Dynamic Laws</div>
+          <ul>
+            <li>Sensitivity to Initial Conditions</li>
+            <li>Self-Organization &amp; Emergence</li>
+            <li>Thresholds &amp; Tipping Points</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <div class="tier-label">Tier 3 · Intervention Operators</div>
+          <ul>
+            <li>Adaptation, Evolution &amp; Learning</li>
+            <li>Resilience, Robustness &amp; Fragility</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -403,151 +353,63 @@
     <div class="about-inner">
       <div class="about-meta">
         <div class="about-name">Kurt Rowley, PhD</div>
-        <div class="about-role">Applied Systems Science Practitioner</div>
-        <div class="about-role" style="font-size:0.8rem; margin-top:-0.4rem;">
-          Systems scientist · Medical researcher · Instructional designer ·
-          Software architect · Business founder · Author
-        </div>
+        <div class="about-role">Systems scientist · Medical researcher · Instructional designer</div>
         <div class="tags">
-          <span class="tag">Health &amp; Medicine</span>
-          <span class="tag">Learning &amp; Training</span>
-          <span class="tag">Software Systems</span>
-          <span class="tag">Business Design</span>
-          <span class="tag">Writing &amp; Instruction</span>
-          <span class="tag">Futurism</span>
+          <span class="tag">Health Systems</span>
+          <span class="tag">Learning Systems</span>
+          <span class="tag">Information Systems</span>
+          <span class="tag">Technology Governance</span>
         </div>
       </div>
       <div class="about-text">
         <h2>About ISRD</h2>
         <p>
-          ISRD is an applied systems R&amp;D practice that helps solve complex problems
-          in health, learning, technology, and human performance. It publishes articles,
-          blogs, ebooks, and courses that share its methods — and develops practical tools
-          and products that put applied systems science directly into use.
+          ISRD — Intervention Systems R&amp;D — is an applied systems science practice.
+          We develop the methodology for understanding, diagnosing, and steering complex systems:
+          biological, social, and technological.
         </p>
         <p>
-          The work spans medical problem-solving (using complexity and attractor concepts
-          for chronic illness), software development, high-stakes training design,
-          expert practice development, business building, and writing. The common thread
-          is applied systems method: read the structure, map the attractors, intervene
-          experimentally, evolve the model.
+          The core claim is that the most important problems of this century are
+          attractor problems — situations where the harmful pattern is stable,
+          self-maintaining, and not susceptible to solutions that treat it as
+          a technical problem or a compliance problem.
+          They require attractor engineering: identifying what holds the pattern in place,
+          finding the leverage points, and designing interventions that shift it.
         </p>
         <p>
-          Scientists don't stop — they focus. This is that focus.
+          The science for doing this rigorously has existed for decades.
+          The gap is deployment at scale. That is the work.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- RECENT WRITING -->
-  <section class="writing" id="writing">
-    <div class="section-label">Writing</div>
-    <h2 class="section-title">Recent articles and research notes</h2>
-
-    <div class="posts">
-      <a href="#writing/articles/energy-envelopes" class="post">
-        <div class="post-date">May 2026</div>
-        <div class="post-body">
-          <div class="post-tag">Systems Theory · ME/CFS</div>
-          <h3>Energy Envelopes and Feedback Loops: Why Pacing Works When Rest Doesn't</h3>
-          <p>A systems-level explanation of why the standard advice to simply rest often fails ME/CFS patients, and what the feedback dynamics actually suggest.</p>
-        </div>
-      </a>
-      <a href="#writing/articles/reader-first-intro" class="post">
-        <div class="post-date">Apr 2026</div>
-        <div class="post-body">
-          <div class="post-tag">Writing · Instruction</div>
-          <h3>Reader-First: Why Most Writing Begins at the Wrong End</h3>
-          <p>The dominant writing advice — outline, then draft — is backwards for expository and instructional writing.</p>
-        </div>
-      </a>
-      <a href="#writing/articles/pattern-is-the-message" class="post">
-        <div class="post-date">Mar 2026</div>
-        <div class="post-body">
-          <div class="post-tag">Systems Science</div>
-          <h3>Pattern Is the Message: On Systems Science as Meta-Discipline</h3>
-          <p>Systems science doesn't study a domain — it studies the structure underneath all domains.</p>
-        </div>
-      </a>
-    </div>
-
-    <a href="#writing/articles" class="view-all">All writing →</a>
-  </section>
-
-  <!-- SOFTWARE -->
-  <section class="stub featured" id="software">
-    <div class="section-label">Software</div>
-    <h2 class="section-title">AI-powered tools for systems thinkers</h2>
-    <p class="section-intro">Applying systems science shouldn't require a PhD. These tools make the frameworks accessible and actionable.</p>
-    <div class="stub-cols">
-      <div class="stub-item">
-        <div class="card-icon health" style="margin-bottom:0.8rem">🧩</div>
-        <h3>Systems Science Applied Sandbox</h3>
-        <p>Describe your situation or problem. The AI evaluates it through a systems science lens, recommends appropriate frameworks and tools, and helps you set up a structured project.</p>
-        <span class="coming">In Development</span>
-      </div>
-      <div class="stub-item">
-        <div class="card-icon writing" style="margin-bottom:0.8rem">✍️</div>
-        <h3>Reader-First Writing Method App</h3>
-        <p>An interactive implementation of the Reader-First Writing System. AI-assisted drafting that applies the method in real time — for technical, instructional, and expository writing.</p>
-        <a href="/reader-first-app/" class="btn-primary" style="display:inline-block;margin-top:0.75rem">Open App →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- COURSES -->
-  <section class="stub" id="courses" style="background:var(--cream)">
-    <div class="section-label">Courses</div>
-    <h2 class="section-title">From core theory to applied mastery</h2>
-    <p class="section-intro">A full curriculum grounded in the systems science ontology — co-hosted on a major LMS with certificate tracks across theory, domain, and methods.</p>
-    <div class="stub-cols">
-      <div class="stub-item">
-        <h3>Core Theories</h3>
-        <p>General Systems Theory · Cybernetics · Complexity Science · Systems Dynamics · Systems Engineering · Operations Research · Soft Systems Methodology</p>
-        <span class="coming">Foundation Track</span>
-      </div>
-      <div class="stub-item">
-        <h3>Domain Applications</h3>
-        <p>Systems Biology · Ecology · Public Health · Education &amp; Learning · Information Systems · Organizational Systems · Governance &amp; Policy · Sociotechnical Systems</p>
-        <span class="coming">Applied Track</span>
-      </div>
-      <div class="stub-item">
-        <h3>Methods &amp; Tools</h3>
-        <p>Mathematical Modeling · Simulation · Network Analysis · Optimization · Statistics &amp; Inference · Computation</p>
-        <span class="coming">Methods Track</span>
-      </div>
-      <div class="stub-item">
-        <h3>Enabling Technologies</h3>
-        <p>AI &amp; Machine Learning · Big Data · Digital Twins · Databases &amp; Data Pipelines · Computer Science Tooling</p>
-        <span class="coming">Technology Track</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <h2>Follow the work</h2>
-    <p>New research notes, tools, and writing — delivered occasionally, never rushed.</p>
-    <form class="subscribe-form" onsubmit="return false;">
-      <input type="email" placeholder="your@email.com">
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+  <!-- SOFTWARE LINK — thin strip, not a full section -->
+  <div class="tools-strip">
+    <span class="tools-label">Tools</span>
+    <span class="tools-text">
+      <a href="/reader-first-app/" class="tools-link">Reader-First Writing Method App ↗</a>
+      — An interactive implementation of ISRD's instructional writing methodology.
+    </span>
+  </div>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="section-label">Contact</div>
     <h2 class="section-title">Get in touch</h2>
-    <p class="section-intro">Questions about the research, tools, or workbooks — use whichever address fits best.</p>
+    <p class="section-intro">
+      Questions about the research, methods, or applications — or to discuss a
+      collaboration or consulting engagement.
+    </p>
     <div class="contact-grid">
       <div class="contact-card">
         <div class="contact-card-label">General</div>
-        <div class="contact-card-purpose">Research questions, ideas, or just to connect.</div>
+        <div class="contact-card-purpose">Research questions, ideas, collaborations.</div>
         <a href="mailto:kurt@isrd.com">kurt@isrd.com</a>
       </div>
       <div class="contact-card">
-        <div class="contact-card-label">Tools &amp; Workbooks</div>
-        <div class="contact-card-purpose">Help with interactive tools, workbooks, or access issues.</div>
+        <div class="contact-card-label">Tools &amp; Support</div>
+        <div class="contact-card-purpose">Help with interactive tools or publications.</div>
         <a href="mailto:support@isrd.com">support@isrd.com</a>
       </div>
     </div>
@@ -557,16 +419,14 @@
   <footer>
     <div class="footer-brand">ISRD</div>
     <ul class="footer-links">
-      <li><a href="#research">Research</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#software">Software</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#publications">Publications</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="/reader-first-app/">Writing App ↗</a></li>
     </ul>
     <div class="footer-copy">
-      © 2026 Intervention Systems R&D · Kurt Rowley, PhD · isrd.com
+      © 2026 Intervention Systems R&amp;D · Kurt Rowley, PhD · isrd.com
     </div>
   </footer>
 

@@ -25,7 +25,9 @@ const themeToggle = document.getElementById('theme-toggle')!;
 
 function applyTheme(theme: string): void {
   document.documentElement.setAttribute('data-theme', theme);
-  themeToggle.textContent = theme === 'dark' ? '☀ Light' : '☾ Dark';
+  // Minimal icon-only toggle; ☀ = switch to light, ☾ = switch to dark
+  themeToggle.textContent = theme === 'dark' ? '☀' : '☾';
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   localStorage.setItem(THEME_KEY, theme);
 }
 

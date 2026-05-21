@@ -105,10 +105,16 @@ function routeWriting(parts: string[]): void {
     renderMd(loadMd(`writing/${sub}/${slug}`), `#writing/${sub}`);
   } else if (sub) {
     const items = (manifest.writing as Record<string, ContentItem[]>)[sub] ?? [];
-    const labels: Record<string, string> = { articles: 'Articles', blog: 'Blog Posts' };
-    renderList(labels[sub] ?? toTitle(sub), items, `writing/${sub}`, '#writing');
+    const labels: Record<string, string> = {
+      analyses: 'Analyses & Essays',
+      articles: 'Articles',
+      blog: 'Blog Posts',
+    };
+    renderList(labels[sub] ?? toTitle(sub), items, `writing/${sub}`, '#publications');
   } else {
-    renderLanding('Writing', [
+    renderLanding('Publications', [
+      { href: '#writing/analyses', title: 'Analyses & Essays',
+        desc: 'Think tank essays and analyses on systems science and civilizational dynamics.' },
       { href: '#writing/articles', title: 'Articles',
         desc: 'Long-form research and analysis across systems science and applied domains.' },
       { href: '#writing/blog', title: 'Blog Posts',
@@ -187,8 +193,7 @@ function routeSoftware(parts: string[]): void {
 // Hashes that correspond to sections on the main page (scroll, don't route).
 // Sub-paths like #writing/articles still route even though #writing scrolls.
 const ON_PAGE = new Set([
-  '', 'explore', 'featured', 'publications',
-  'about', 'contact', 'writing', 'courses', 'newsletter',
+  '', 'about', 'contact', 'publications', 'research',
 ]);
 
 function route(): void {

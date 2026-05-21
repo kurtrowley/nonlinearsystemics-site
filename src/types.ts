@@ -8,6 +8,7 @@ export interface ContentItem {
 
 export interface Manifest {
   writing: {
+    analyses: ContentItem[];
     articles: ContentItem[];
     blog: ContentItem[];
   };
