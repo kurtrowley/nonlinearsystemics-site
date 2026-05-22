@@ -57,7 +57,7 @@
 
       <li class="has-dropdown" :class="{ open: sub === 'research' }">
         <a href="#research"
-           @click.prevent="toggleSub('research')">
+           @click="toggleSub('research')">
           Research <span class="caret">›</span>
         </a>
         <ul class="dropdown">
@@ -71,7 +71,7 @@
 
       <li class="has-dropdown" :class="{ open: sub === 'publications' }">
         <a href="#publications"
-           @click.prevent="toggleSub('publications')">
+           @click="toggleSub('publications')">
           Publications <span class="caret">›</span>
         </a>
         <ul class="dropdown">
