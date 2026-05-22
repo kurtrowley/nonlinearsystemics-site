@@ -270,14 +270,10 @@
         <span>Systemics</span>
       </div>
       <h1 class="hero-title">The Science Between the Sciences</h1>
-      <p class="hero-statement">
-        Technology keeps reorganizing civilization faster than civilization can respond.
-        This is not a new problem. It is a systems problem.
-        And it finally has a science.
-      </p>
+      <p id="hero-statement" class="hero-statement"></p>
       <div class="hero-cta">
-        <a href="#publications/articles/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural article</a>
-        <a href="#about" class="btn-ghost">About the practice</a>
+        <a id="hero-cta-primary" href="#publications/articles/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural article</a>
+        <a id="hero-cta-ghost" href="#about" class="btn-ghost">About the practice</a>
       </div>
     </div>
 
@@ -289,176 +285,65 @@
 
   <!-- POSITION STRIP -->
   <div class="identity">
-    <p>
-      Complex systems at every scale — from chronic illness to organizational dysfunction to civilizational drift —
-      fail in recognizable ways. The failure patterns are not accidents.
-      They are <strong>attractors</strong>: stable configurations maintained by feedback dynamics.
-      Nonlinear Systemics develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.
-    </p>
+    <p id="identity-text"></p>
   </div>
 
-  <!-- FEATURED PUBLICATION -->
+  <!-- FEATURED PUBLICATION — populated from manifest + site-content.json -->
   <section class="featured" id="publications">
-    <div class="section-label">Publications</div>
-    <h2 class="section-title">Essays and applied analysis</h2>
+    <div id="pub-section-label" class="section-label">Publications</div>
+    <h2 id="pub-section-title" class="section-title">Articles and applied analysis</h2>
 
-    <!-- Lead essay — full-width featured card -->
-    <a href="#publications/articles/capability-without-stewardship"
-       class="featured-essay"
-       data-content-link>
-      <div class="essay-meta">
-        <span class="essay-tag">Publications / Articles</span>
-        <span class="essay-date">May 2026</span>
-      </div>
-      <h3 class="essay-title">Capability Without Stewardship</h3>
-      <p class="essay-sub">Technology keeps reorganizing civilization faster than civilization can respond. This is not a new problem. It is a systems problem. And it finally has a science.</p>
-      <p class="essay-body">
-        In 1963, a group of mid-century intellectuals asked a question that turned out to be premature by sixty years.
-        Raymond Aron, Robert Oppenheimer, and George Kennan were not asking whether technology was good or bad —
-        they were asking what technology <em>does</em> to the social order. They were right then.
-        The diagnosis has been correct for sixty years. The response still hasn't arrived at the necessary scale.
-      </p>
-      <span class="essay-link">Read the article →</span>
-    </a>
+    <!-- Lead article — rendered by home.ts from the featured_article key in site-content.json -->
+    <div id="pub-featured"></div>
 
-    <!-- Secondary articles -->
-    <div class="cards pub-cards">
-      <a href="#publications/articles/pattern-is-the-message" class="card" data-content-link>
-        <div class="card-tag">Publications / Articles</div>
-        <h3>Pattern Is the Message</h3>
-        <p>Systems science doesn't study a domain — it studies the structure underneath all domains. Why that matters for every field that studies anything.</p>
-        <span class="card-link">Read the article →</span>
-      </a>
-      <a href="#publications/articles/reader-first-intro" class="card" data-content-link>
-        <div class="card-tag">Publications / Articles</div>
-        <h3>Reader-First: Why Most Writing Begins at the Wrong End</h3>
-        <p>The dominant writing advice is backwards for expository and instructional writing. A systems explanation of why, and what to do instead.</p>
-        <span class="card-link">Read the article →</span>
-      </a>
-      <a href="#publications/articles/for-creators" class="card" data-content-link>
-        <div class="card-tag">Publications / Articles</div>
-        <h3>Nonlinear Systemics for Digital Creators</h3>
-        <p>Applying complex systems science to the design of ebooks, courses, and other information-rich digital work.</p>
-        <span class="card-link">Read the article →</span>
-      </a>
-    </div>
+    <!-- Secondary articles — rendered by home.ts from manifest.publications.articles -->
+    <div id="pub-cards" class="cards pub-cards"></div>
   </section>
 
-  <!-- RESEARCH -->
+  <!-- RESEARCH — populated from program.json files in each research subdirectory -->
   <section class="research-strip" id="research">
     <div class="research-inner">
       <div class="research-text">
-        <div class="section-label">Research</div>
-        <h2 class="section-title">Five active research programs</h2>
-        <p class="section-intro">
-          Five active research programs, one methodology — attractor engineering — applied across every scale of complex systems.
-          Each program is a distinct application domain; all share the same complex systems framework.
-          The foundational methods are documented in the Systems Science Update.
-        </p>
-        <a href="#research/systems_science_update" class="btn-outline">Browse Systems Science Update →</a>
+        <div id="research-section-label" class="section-label">Research</div>
+        <h2 id="research-section-title" class="section-title">Five active research programs</h2>
+        <p id="research-section-intro" class="section-intro"></p>
+        <a id="research-browse-btn" href="#research/systems_science_update" class="btn-outline">Browse Systems Science Update →</a>
       </div>
-      <div class="cards research-cards">
-        <a href="#research/systems_science_update" class="card" data-content-link>
-          <div class="card-tag">Research / Systems Science Update</div>
-          <h3>Systems Science Update</h3>
-          <p>The ISRD framework and its theoretical foundations — nine core concepts in three tiers, from attractor ontology to intervention operators.</p>
-          <span class="card-link">Browse the program →</span>
-        </a>
-        <a href="#research/complex_diseases/energy-envelopes" class="card" data-content-link>
-          <div class="card-tag">Research / Complex Diseases</div>
-          <h3>Energy Envelopes and Feedback Loops</h3>
-          <p>A systems-level explanation of why rest alone fails ME/CFS patients, and what the feedback dynamics actually suggest about pacing and recovery.</p>
-          <span class="card-link">Read the analysis →</span>
-        </a>
-        <a href="#research/human_spiritual_systems/overview" class="card" data-content-link>
-          <div class="card-tag">Research / Human Spiritual Systems</div>
-          <h3>Human Spiritual Systems</h3>
-          <p>Spiritual practice, ritual, and meaning-making modeled as attractors — the most persistent self-organizing structures in human history, analyzed through complex systems science.</p>
-          <span class="card-link">Read the program overview →</span>
-        </a>
-        <a href="#research/evolutionary_futurism/overview" class="card" data-content-link>
-          <div class="card-tag">Research / Evolutionary Futurism</div>
-          <h3>Evolutionary Futurism</h3>
-          <p>Mapping the attractor landscape of human civilization — where current trajectories lead, what holds them in place, and where leverage might exist to shift them before the window closes.</p>
-          <span class="card-link">Read the program overview →</span>
-        </a>
-      </div>
+      <!-- Cards rendered by home.ts from content/research/*/program.json -->
+      <div id="research-cards" class="cards research-cards"></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT — populated from site-content.json -->
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-meta">
-        <div class="about-name">Kurt Rowley, PhD</div>
-        <div class="about-role">Systems scientist · Medical researcher · Instructional designer</div>
-        <div class="tags">
-          <span class="tag">Health Systems</span>
-          <span class="tag">Learning Systems</span>
-          <span class="tag">Information Systems</span>
-          <span class="tag">Technology Governance</span>
-        </div>
+        <div id="about-name" class="about-name">Kurt Rowley, PhD</div>
+        <div id="about-role" class="about-role">Systems scientist · Medical researcher · Instructional designer</div>
+        <div id="about-tags" class="tags"></div>
       </div>
       <div class="about-text">
-        <h2>About the Practice</h2>
-        <p>
-          Nonlinear Systemics is an applied complex systems science practice —
-          research, consulting, and publishing focused on understanding, diagnosing,
-          and steering nonlinear systems: biological, social, and technological.
-        </p>
-        <p>
-          The core claim is that the most important problems of this century are
-          attractor problems — situations where the harmful pattern is stable,
-          self-maintaining, and not susceptible to solutions that treat it as
-          a technical problem or a compliance problem.
-          They require attractor engineering: identifying what holds the pattern in place,
-          finding the leverage points, and designing interventions that shift it.
-        </p>
-        <p>
-          The science for doing this rigorously has existed for decades.
-          The gap is deployment at scale. That is the work.
-        </p>
+        <h2 id="about-heading">About the Practice</h2>
+        <div id="about-paragraphs"></div>
       </div>
     </div>
   </section>
 
-  <!-- SOFTWARE LINK — thin strip, not a full section -->
-  <div class="tools-strip">
-    <span class="tools-label">Tools</span>
-    <span class="tools-text">
-      <a href="/reader-first-app/" class="tools-link">Reader-First Writing Method App ↗</a>
-      — An interactive implementation of the Nonlinear Systemics instructional writing methodology.
-    </span>
-  </div>
+  <!-- SOFTWARE LINK — thin strip, populated from site-content.json -->
+  <div id="tools-strip" class="tools-strip"></div>
 
-  <!-- CONTACT -->
+  <!-- CONTACT — populated from site-content.json -->
   <section class="contact" id="contact">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Get in touch</h2>
-    <p class="section-intro">
-      Questions about the research, methods, or applications — or to discuss a
-      collaboration or consulting engagement.
-    </p>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-card-label">General</div>
-        <div class="contact-card-purpose">Research questions, ideas, collaborations.</div>
-        <a href="mailto:kurt@nonlinearsystemics.com">kurt@nonlinearsystemics.com</a>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-label">Tools &amp; Support</div>
-        <div class="contact-card-purpose">Help with interactive tools or publications.</div>
-        <a href="mailto:support@nonlinearsystemics.com">support@nonlinearsystemics.com</a>
-      </div>
-    </div>
+    <div id="contact-section-label" class="section-label">Contact</div>
+    <h2 id="contact-section-title" class="section-title">Get in touch</h2>
+    <p id="contact-section-intro" class="section-intro"></p>
+    <div id="contact-grid" class="contact-grid"></div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER — populated from site-content.json -->
   <footer>
-    <div class="footer-brand">Nonlinear Systemics</div>
-    <div class="footer-copy">
-      © 2026 Nonlinear Systemics · Kurt Rowley, PhD · nonlinearsystemics.com
-    </div>
+    <div id="footer-brand" class="footer-brand">Nonlinear Systemics</div>
+    <div id="footer-copy" class="footer-copy"></div>
   </footer>
 
   <script type="module" src="/src/main.ts"></script>

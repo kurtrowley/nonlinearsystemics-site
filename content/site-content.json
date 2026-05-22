@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Nonlinear Systemics — The Science Between the Sciences",
+    "description": "An applied complex systems science practice. Research, consulting, and publishing across health, learning, and civilizational systems."
+  },
+  "hero": {
+    "statement": "Technology keeps reorganizing civilization faster than civilization can respond. This is not a new problem. It is a systems problem. And it finally has a science.",
+    "cta_primary_label": "Read the inaugural article",
+    "cta_primary_href": "#publications/articles/capability-without-stewardship",
+    "cta_ghost_label": "About the practice",
+    "cta_ghost_href": "#about"
+  },
+  "identity": "Complex systems at every scale — from chronic illness to organizational dysfunction to civilizational drift — fail in recognizable ways. The failure patterns are not accidents. They are <strong>attractors</strong>: stable configurations maintained by feedback dynamics. Nonlinear Systemics develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.",
+  "publications": {
+    "section_label": "Publications",
+    "section_title": "Articles and applied analysis",
+    "featured_article": "capability-without-stewardship",
+    "featured_excerpt": "In 1963, a group of mid-century intellectuals asked a question that turned out to be premature by sixty years. Raymond Aron, Robert Oppenheimer, and George Kennan were not asking whether technology was good or bad — they were asking what technology <em>does</em> to the social order. They were right then. The diagnosis has been correct for sixty years. The response still hasn't arrived at the necessary scale.",
+    "card_link_label": "Read the article →",
+    "featured_link_label": "Read the article →"
+  },
+  "research": {
+    "section_label": "Research",
+    "section_title": "Five active research programs",
+    "section_intro": "Five active research programs, one methodology — attractor engineering — applied across every scale of complex systems. Each program is a distinct application domain; all share the same complex systems framework. The foundational methods are documented in the Systems Science Update.",
+    "browse_label": "Browse Systems Science Update →",
+    "browse_href": "#research/systems_science_update"
+  },
+  "about": {
+    "name": "Kurt Rowley, PhD",
+    "role": "Systems scientist · Medical researcher · Instructional designer",
+    "tags": ["Health Systems", "Learning Systems", "Information Systems", "Technology Governance"],
+    "heading": "About the Practice",
+    "paragraphs": [
+      "Nonlinear Systemics is an applied complex systems science practice — research, consulting, and publishing focused on understanding, diagnosing, and steering nonlinear systems: biological, social, and technological.",
+      "The core claim is that the most important problems of this century are attractor problems — situations where the harmful pattern is stable, self-maintaining, and not susceptible to solutions that treat it as a technical problem or a compliance problem. They require attractor engineering: identifying what holds the pattern in place, finding the leverage points, and designing interventions that shift it.",
+      "The science for doing this rigorously has existed for decades. The gap is deployment at scale. That is the work."
+    ]
+  },
+  "contact": {
+    "section_label": "Contact",
+    "section_title": "Get in touch",
+    "section_intro": "Questions about the research, methods, or applications — or to discuss a collaboration or consulting engagement.",
+    "cards": [
+      {
+        "label": "General",
+        "purpose": "Research questions, ideas, collaborations.",
+        "email": "kurt@nonlinearsystemics.com"
+      },
+      {
+        "label": "Tools & Support",
+        "purpose": "Help with interactive tools or publications.",
+        "email": "support@nonlinearsystemics.com"
+      }
+    ]
+  },
+  "tools": {
+    "label": "Tools",
+    "items": [
+      {
+        "label": "Reader-First Writing Method App",
+        "href": "/reader-first-app/",
+        "description": "An interactive implementation of the Nonlinear Systemics instructional writing methodology."
+      }
+    ]
+  },
+  "footer": {
+    "brand": "Nonlinear Systemics",
+    "copy": "© 2026 Nonlinear Systemics · Kurt Rowley, PhD · nonlinearsystemics.com"
+  }
+}

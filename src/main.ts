@@ -1,10 +1,17 @@
 import Alpine from 'alpinejs';
 import './site.css';
 import { initRouter } from './router';
+import { populateHomePage } from './home';
+import { siteContent, programDescriptors } from './content';
 
 // Alpine handles mobile nav dropdowns via x-data attributes in the HTML
 (window as unknown as Record<string, unknown>).Alpine = Alpine;
 Alpine.start();
+
+// Populate home page text and cards from captive JSON files.
+// Must run before initRouter so dynamic cards have proper hrefs when the
+// router fires on first load (e.g. direct link to #publications/articles/foo).
+populateHomePage(siteContent, programDescriptors);
 
 // Content router — no fetch(), reads from build-time bundle
 initRouter();
