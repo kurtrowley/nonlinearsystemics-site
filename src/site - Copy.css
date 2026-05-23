@@ -173,17 +173,12 @@ nav.scrolled .dropdown li a:hover { color: var(--terracotta) !important; backgro
 
 /* ── HERO ── */
 .hero {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  position: relative; min-height: 100vh;
   background: linear-gradient(168deg,
     #1A0C04 0%, #3D1E0E 14%, #5E3020 28%,
     #3A2850 46%, #1C2340 64%, #0D1117 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   overflow: hidden;
-  padding: 2rem 1.25rem;
 }
 .blueprint-bg {
   position: absolute; inset: 0;
@@ -216,11 +211,9 @@ nav.scrolled .dropdown li a:hover { color: var(--terracotta) !important; backgro
 }
 .hero-title {
   font-family: 'Lora', serif;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  font-weight: 700; color: #fff;
+  line-height: 1.05; letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 40px rgba(0,0,0,0.4);
 }

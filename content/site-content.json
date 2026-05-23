@@ -10,7 +10,7 @@
     "cta_ghost_label": "About the practice",
     "cta_ghost_href": "#about"
   },
-  "identity": "Complex systems at every scale — from chronic illness to organizational dysfunction to civilizational drift — fail in recognizable ways. The failure patterns are not accidents. They are <strong>attractors</strong>: stable configurations maintained by feedback dynamics. Nonlinear Systemics develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.",
+  "identity": "Complex systems at every scale fail in recognizable ways, from chronic illness to organizational dysfunction to civilizational drift. The failure patterns are predictable when the complex attractors are mapped. <strong>Attractors</strong> are: stable configurations maintained by feedback dynamics. Nonlinear Systemics develops and applies the science of <strong>diagnosing those attractors and shifting them</strong>.",
   "publications": {
     "section_label": "Publications",
     "section_title": "Articles and applied analysis",
@@ -28,13 +28,13 @@
   },
   "about": {
     "name": "Kurt Rowley, PhD",
-    "role": "Systems scientist · Medical researcher · Instructional designer",
-    "tags": ["Health Systems", "Learning Systems", "Information Systems", "Technology Governance"],
+    "role": "Senior Systems Scientist",
+    "tags": ["Health Systems", "Learning and Development", "Information Systems", "Technology Governance", "Systemic Futurism"],
     "heading": "About the Practice",
     "paragraphs": [
-      "Nonlinear Systemics is an applied complex systems science practice — research, consulting, and publishing focused on understanding, diagnosing, and steering nonlinear systems: biological, social, and technological.",
-      "The core claim is that the most important problems of this century are attractor problems — situations where the harmful pattern is stable, self-maintaining, and not susceptible to solutions that treat it as a technical problem or a compliance problem. They require attractor engineering: identifying what holds the pattern in place, finding the leverage points, and designing interventions that shift it.",
-      "The science for doing this rigorously has existed for decades. The gap is deployment at scale. That is the work."
+      "Nonlinear Systemics is an applied complex systems science practice. We conduct original applied research, consult with clients, and publish important generalizable findings. Our work focuses on understanding and diagnosing complex nonlinear problems, then designing and testing interventions: biological, social, and technological.",
+      "Our core claim is that the most important problems of this century are attractor problems. These are situations where a harmful complex systemic pattern has become stable, self-maintaining, and not susceptible to typical technical or compliance solutions. These are similar to the mathematical concept of strange attractors. Complex problems often require attractor engineering: identifying what holds the patterns in place, finding the leverage points holding attractors in place, and designing interventions that shift the attractor patterns.",
+      "The science for doing this exists but is highly interdisciplinary and generally not organized at the levels required to tackle the hardest systemic challenges. We apply expert-level complex systems engineering methods at the appropriate scale for the problems of focus in our research and consulting practice."
     ]
   },
   "contact": {
@@ -66,6 +66,6 @@
   },
   "footer": {
     "brand": "Nonlinear Systemics",
-    "copy": "© 2026 Nonlinear Systemics · Kurt Rowley, PhD · nonlinearsystemics.com"
+    "copy": "© 2026 Nonlinear Systemics, LLC · nonlinearsystemics.com"
   }
 }
