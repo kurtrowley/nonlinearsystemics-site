@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonlinear Systemics — Applied Complex Systems Science</title>
+  <meta name="description" content="An applied complex systems science practice. Research, consulting, and publishing across health, learning, and civilizational systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Apply saved theme before paint to prevent flash of wrong theme -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('isrd-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- CONTENT VIEW — full-page overlay for reading articles -->
+  <div id="content-view">
+    <div class="cv-bar">
+      <a href="#" id="back-btn">Back</a>
+    </div>
+    <div id="content-body"></div>
+  </div>
+
+  <!-- NAV — Alpine.js manages mobile state; desktop is CSS :hover -->
+  <nav id="nav"
+       x-data="{
+         open: false,
+         sub: null,
+         close()    { this.open = false; this.sub = null; },
+         toggleSub(name) { this.sub = this.sub === name ? null : name; }
+       }"
+       :class="{ open: open }"
+       @close-nav.window="close()">
+
+    <a href="#" class="nav-brand">
+      <span class="brand-top">Nonlinear</span>
+      <svg class="brand-line" width="78" height="6" viewBox="0 0 78 6" fill="none" aria-hidden="true">
+        <path d="M0,3 C13,1 19,5 32,3 C45,1 51,5 64,3 L78,3" stroke="#D4A847" stroke-width="0.8" opacity="0.45"/>
+      </svg>
+      <span class="brand-bottom">Systemics</span>
+    </a>
+
+    <button class="nav-toggle"
+            @click="open = !open; if (!open) sub = null"
+            :aria-expanded="open.toString()"
+            aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#about" @click="close()">About</a></li>
+
+      <li class="has-dropdown" :class="{ open: sub === 'research' }">
+        <a href="#research"
+           @click="toggleSub('research')">
+          Research <span class="caret">›</span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#research/systems_science_update"      @click="close()">Systems Science Update</a></li>
+          <li><a href="#research/reader_first_writing_system" @click="close()">Reader-First Writing System</a></li>
+          <li><a href="#research/complex_diseases"            @click="close()">Complex Diseases</a></li>
+          <li><a href="#research/human_spiritual_systems"     @click="close()">Human Spiritual Systems</a></li>
+          <li><a href="#research/evolutionary_futurism"       @click="close()">Evolutionary Futurism</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown" :class="{ open: sub === 'publications' }">
+        <a href="#publications"
+           @click="toggleSub('publications')">
+          Publications <span class="caret">›</span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#publications/articles"      @click="close()">Articles</a></li>
+          <li><a href="#publications/blog"          @click="close()">Blog</a></li>
+          <li><a href="#publications/ebooks"        @click="close()">eBooks</a></li>
+          <li><a href="#publications/courses"       @click="close()">Courses</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#contact" @click="close()">Contact</a></li>
+      <li>
+        <button id="theme-toggle" class="nav-theme-btn" aria-label="Toggle theme">☾</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Blueprint: three-tier systems diagram -->
+    <svg class="blueprint-bg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <polygon id="hex" points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25"/>
+        <g id="fig-b">
+          <circle cy="-22" r="4.5"/>
+          <path d="M-6,-16 L-7,-2 L-3,-2 L-3,9 L3,9 L3,-2 L7,-2 L6,-16 L3,-14 L0,-12 L-3,-14 Z"/>
+          <path d="M0,-16 L-1.5,-10 L0,-8 L1.5,-10 Z"/>
+          <path d="M-6,-12 L-11,-6 M6,-12 L11,-7"/>
+          <rect x="9" y="-9" width="5.5" height="4.5" rx="0.5"/>
+          <path d="M10,-9 L10,-11 L13.5,-11 L13.5,-9"/>
+        </g>
+        <g id="fig-f">
+          <path d="M-9,-27 L9,-27"/>
+          <path d="M-4,-27 L-3,-33 L3,-33 L4,-27"/>
+          <circle cy="-22" r="4.5"/>
+          <path d="M-4,-16 L-5,-3 L5,-3 L4,-16"/>
+          <path d="M-2,-16 L-1,-3 M2,-16 L1,-3" stroke-width="0.4"/>
+          <path d="M-2,-3 L-3,9 M2,-3 L3,9"/>
+          <path d="M-4,-11 L-9,-5 M4,-11 L13,-4"/>
+          <path d="M13,-4 L16,5 M12,2 L16,0"/>
+        </g>
+        <g id="fig-w">
+          <path d="M-7,-27 Q0,-32 7,-27 L8,-25 L-8,-25 Z"/>
+          <path d="M-9,-25 L9,-25"/>
+          <circle cy="-20" r="4.5"/>
+          <path d="M-6,-14 L-7,-2 L7,-2 L6,-14"/>
+          <path d="M-6,-9 L-12,-5 M6,-9 L13,-3"/>
+          <path d="M13,-3 L15,4 M12,-2 L15,-5"/>
+          <path d="M-3,-2 L-5,10 M3,-2 L5,10"/>
+          <path d="M-5,10 L-7,10 M5,10 L7,10"/>
+        </g>
+        <g id="fig-a">
+          <circle cy="-21" r="7.5"/>
+          <path d="M-4,-24 Q0,-26 4,-24" stroke-dasharray="2 1.5"/>
+          <ellipse cy="-8" rx="7.5" ry="6.5"/>
+          <path d="M6,-10 L10,-12 L11,-8"/>
+          <path d="M-7,-9 Q-13,-7 -12,-2 M7,-9 Q13,-7 12,-2"/>
+          <circle cx="-12" cy="-2" r="2.5"/>
+          <circle cx="12"  cy="-2" r="2.5"/>
+          <path d="M-4,-1 L-5,10 M4,-1 L5,10"/>
+          <path d="M-5,10 Q-7,10 -7,8 M5,10 Q7,10 7,8"/>
+        </g>
+        <g id="fig-mc">
+          <circle cx="-7" cy="-22" r="4"/>
+          <path d="M-11,-22 Q-10,-28 -7,-28 Q-4,-28 -3,-22"/>
+          <path d="M-11,-16 L-13,6 L-1,6 L-3,-16"/>
+          <path d="M-11,-12 L-15,-7 M-3,-11 L3,-9"/>
+          <circle cx="7" cy="-16" r="3"/>
+          <path d="M5,-12 L4,2 L10,2 L9,-12"/>
+          <path d="M5,2 L4,10 M9,2 L10,10"/>
+          <path d="M3,-9 L5,-10"/>
+        </g>
+      </defs>
+
+      <g stroke="rgba(255,230,190,0.13)" fill="none" stroke-width="0.75">
+        <use href="#hex" transform="translate(100,50)"/>
+        <use href="#hex" transform="translate(186,100)"/>
+        <use href="#hex" transform="translate(100,150)"/>
+        <use href="#hex" transform="translate(186,200)"/>
+        <use href="#hex" transform="translate(272,50)"/>
+        <use href="#hex" transform="translate(272,150)"/>
+        <use href="#hex" transform="translate(358,100)"/>
+        <use href="#hex" transform="translate(358,200)"/>
+        <use href="#hex" transform="translate(444,50)"/>
+        <use href="#hex" transform="translate(444,150)"/>
+        <use href="#hex" transform="translate(530,100)"/>
+        <circle cx="740" cy="105" r="78"/>
+        <circle cx="740" cy="105" r="26"/>
+        <circle cx="740" cy="105" r="9" fill="rgba(255,220,160,0.08)"/>
+        <ellipse cx="782" cy="138" rx="28" ry="11" transform="rotate(32,782,138)" stroke-dasharray="3 5"/>
+        <ellipse cx="703" cy="76"  rx="20" ry="9"  transform="rotate(-18,703,76)"  stroke-dasharray="3 5"/>
+        <circle cx="910" cy="145" r="58"/>
+        <circle cx="910" cy="140" r="19"/>
+        <ellipse cx="942" cy="170" rx="22" ry="9" transform="rotate(42,942,170)" stroke-dasharray="3 5"/>
+        <circle cx="1060" cy="80" r="65"/>
+        <circle cx="1060" cy="78" r="21"/>
+        <line x1="574" y1="105" x2="574" y2="125" stroke-opacity="0.35"/>
+        <line x1="564" y1="115" x2="584" y2="115" stroke-opacity="0.35"/>
+        <line x1="740" y1="188" x2="740" y2="210" stroke-opacity="0.35"/>
+        <line x1="729" y1="199" x2="751" y2="199" stroke-opacity="0.35"/>
+        <line x1="60" y1="255" x2="400" y2="255" stroke-opacity="0.07" stroke-dasharray="6 10"/>
+      </g>
+
+      <g stroke="rgba(200,190,255,0.10)" fill="none">
+        <ellipse cx="720" cy="415" rx="490" ry="148" stroke-width="1" stroke-opacity="0.045"/>
+        <g stroke-width="0.55">
+          <line x1="190" y1="340" x2="340" y2="305"/><line x1="190" y1="340" x2="275" y2="448"/>
+          <line x1="340" y1="305" x2="460" y2="375"/><line x1="340" y1="305" x2="275" y2="448"/>
+          <line x1="460" y1="375" x2="578" y2="328"/><line x1="460" y1="375" x2="418" y2="498"/>
+          <line x1="460" y1="375" x2="548" y2="468"/><line x1="578" y1="328" x2="700" y2="368"/>
+          <line x1="578" y1="328" x2="548" y2="468"/><line x1="700" y1="368" x2="822" y2="308"/>
+          <line x1="700" y1="368" x2="678" y2="518"/><line x1="700" y1="368" x2="548" y2="468"/>
+          <line x1="822" y1="308" x2="948" y2="358"/><line x1="822" y1="308" x2="798" y2="478"/>
+          <line x1="948" y1="358" x2="1102" y2="338"/><line x1="948" y1="358" x2="918" y2="448"/>
+          <line x1="948" y1="358" x2="798" y2="478"/><line x1="1102" y1="338" x2="1202" y2="388"/>
+          <line x1="1102" y1="338" x2="1048" y2="498"/><line x1="1202" y1="388" x2="1178" y2="458"/>
+          <line x1="275"  y1="448" x2="418"  y2="498"/><line x1="418"  y1="498" x2="548"  y2="468"/>
+          <line x1="548"  y1="468" x2="678"  y2="518"/><line x1="678"  y1="518" x2="798"  y2="478"/>
+          <line x1="798"  y1="478" x2="918"  y2="448"/><line x1="918"  y1="448" x2="1048" y2="498"/>
+          <line x1="1048" y1="498" x2="1178" y2="458"/>
+        </g>
+        <g stroke="rgba(225,215,255,0.19)" fill="none" stroke-width="0.85" stroke-linejoin="round" stroke-linecap="round">
+          <use href="#fig-b"  transform="translate(190,340)"/><use href="#fig-f"  transform="translate(340,305)"/>
+          <use href="#fig-w"  transform="translate(460,375)"/><use href="#fig-a"  transform="translate(578,328)"/>
+          <use href="#fig-mc" transform="translate(700,368)"/><use href="#fig-b"  transform="translate(822,308)"/>
+          <use href="#fig-f"  transform="translate(948,358)"/><use href="#fig-w"  transform="translate(1102,338)"/>
+          <use href="#fig-a"  transform="translate(1202,388)"/><use href="#fig-b"  transform="translate(275,448)"/>
+          <use href="#fig-f"  transform="translate(418,498)"/><use href="#fig-w"  transform="translate(548,468)"/>
+          <use href="#fig-a"  transform="translate(678,518)"/><use href="#fig-b"  transform="translate(798,478)"/>
+          <use href="#fig-f"  transform="translate(918,448)"/><use href="#fig-w"  transform="translate(1048,498)"/>
+          <use href="#fig-a"  transform="translate(1178,458)"/>
+        </g>
+        <g stroke-width="0.4" stroke-opacity="0.55">
+          <path d="M700,368 C718,318 755,298 788,275"/>
+          <path d="M700,368 C682,318 648,302 622,280"/>
+          <path d="M948,358 C966,308 1002,292 1028,270"/>
+          <path d="M460,375 C442,325 418,310 395,290"/>
+        </g>
+        <line x1="60" y1="550" x2="500" y2="550" stroke-opacity="0.06" stroke-dasharray="6 10"/>
+      </g>
+
+      <g stroke="rgba(180,215,255,0.11)" fill="none">
+        <g transform="translate(720,740)">
+          <ellipse rx="105" ry="42"  transform="rotate(-14)" stroke-width="0.75"/>
+          <ellipse rx="205" ry="82"  transform="rotate(-20)" stroke-width="0.60"/>
+          <ellipse rx="325" ry="125" transform="rotate(-9)"  stroke-width="0.50"/>
+          <circle r="7" fill="rgba(255,240,200,0.14)" stroke-width="0.8"/>
+          <circle cx="103" cy="0" r="3.5" fill="rgba(200,220,255,0.10)" stroke-width="0.6" transform="rotate(-14)"/>
+          <circle cx="0" cy="-82" r="4.5" fill="rgba(200,220,255,0.10)" stroke-width="0.6" transform="rotate(-20)"/>
+          <g transform="rotate(-9) translate(0,-125)">
+            <circle r="5.5" fill="rgba(200,220,255,0.09)" stroke-width="0.7" stroke="rgba(180,215,255,0.20)"/>
+            <ellipse rx="16" ry="7" transform="rotate(22)" stroke-width="0.5" stroke="rgba(180,215,255,0.16)" fill="none"/>
+            <circle cx="16" cy="0" r="2.5" transform="rotate(22)" fill="rgba(200,220,255,0.10)" stroke-width="0.5" stroke="rgba(180,215,255,0.20)"/>
+          </g>
+        </g>
+        <g stroke-width="0.65" stroke-opacity="0.75">
+          <path d="M720,740 C775,715 840,675 888,622 C930,574 945,535 968,582"/>
+          <path d="M720,740 C665,765 598,802 552,852"/>
+          <path d="M720,740 C698,698 678,655 700,615 C722,578 762,568 802,598"/>
+          <path d="M720,740 C745,782 762,824 742,862"/>
+        </g>
+        <g fill="rgba(255,255,255,0.18)" stroke="none">
+          <circle cx="148" cy="648" r="2.5"/><circle cx="235" cy="612" r="2"/>
+          <circle cx="172" cy="692" r="2"/><circle cx="305" cy="668" r="1.5"/>
+          <circle cx="88"  cy="775" r="2"/><circle cx="125" cy="748" r="1.5"/>
+        </g>
+        <g stroke-width="0.4" stroke="rgba(255,255,255,0.09)">
+          <line x1="148" y1="648" x2="235" y2="612"/><line x1="235" y1="612" x2="172" y2="692"/>
+          <line x1="172" y1="692" x2="305" y2="668"/><line x1="88"  y1="775" x2="125" y2="748"/>
+          <line x1="125" y1="748" x2="148" y2="648"/>
+        </g>
+        <g fill="rgba(255,255,255,0.18)" stroke="none">
+          <circle cx="1258" cy="622" r="2.5"/><circle cx="1318" cy="668" r="2"/>
+          <circle cx="1342" cy="612" r="1.5"/><circle cx="1292" cy="715" r="2"/>
+          <circle cx="1382" cy="688" r="1.5"/><circle cx="1408" cy="758" r="2"/>
+        </g>
+        <g stroke-width="0.4" stroke="rgba(255,255,255,0.09)">
+          <line x1="1258" y1="622" x2="1318" y2="668"/><line x1="1318" y1="668" x2="1342" y2="612"/>
+          <line x1="1258" y1="622" x2="1292" y2="715"/><line x1="1382" y1="688" x2="1408" y2="758"/>
+        </g>
+        <line x1="720" y1="722" x2="720" y2="758" stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="702" y1="740" x2="738" y2="740" stroke-width="0.5" stroke-opacity="0.3"/>
+      </g>
+    </svg>
+
+    <canvas class="stars"  id="stars1"></canvas>
+    <canvas class="stars2" id="stars2"></canvas>
+    <canvas class="stars3" id="stars3"></canvas>
+
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span>Nonlinear</span>
+        <svg width="120" height="8" viewBox="0 0 120 8" fill="none" aria-hidden="true">
+          <path d="M0,4 C20,1.5 35,6.5 60,4 C85,1.5 100,6.5 120,4" stroke="#D4A847" stroke-width="1" opacity="0.6"/>
+        </svg>
+        <span>Systemics</span>
+      </div>
+      <h1 class="hero-title">The Science Between the Sciences</h1>
+      <p id="hero-statement" class="hero-statement"></p>
+      <div class="hero-cta">
+        <a id="hero-cta-primary" href="#publications/articles/capability-without-stewardship" class="btn-primary" data-content-link>Read the inaugural article</a>
+        <a id="hero-cta-ghost" href="#about" class="btn-ghost">About the practice</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- POSITION STRIP -->
+  <div class="identity">
+    <p id="identity-text"></p>
+  </div>
+
+  <!-- FEATURED PUBLICATION — populated from manifest + site-content.json -->
+  <section class="featured" id="publications">
+    <div id="pub-section-label" class="section-label">Publications</div>
+    <h2 id="pub-section-title" class="section-title">Articles and applied analysis</h2>
+
+    <!-- Lead article — rendered by home.ts from the featured_article key in site-content.json -->
+    <div id="pub-featured"></div>
+
+    <!-- Secondary articles — rendered by home.ts from manifest.publications.articles -->
+    <div id="pub-cards" class="cards pub-cards"></div>
+  </section>
+
+  <!-- RESEARCH — populated from program.json files in each research subdirectory -->
+  <section class="research-strip" id="research">
+    <div class="research-inner">
+      <div class="research-text">
+        <div id="research-section-label" class="section-label">Research</div>
+        <h2 id="research-section-title" class="section-title">Five active research programs</h2>
+        <p id="research-section-intro" class="section-intro"></p>
+        <a id="research-browse-btn" href="#research/systems_science_update" class="btn-outline">Browse Systems Science Update →</a>
+      </div>
+      <!-- Cards rendered by home.ts from content/research/*/program.json -->
+      <div id="research-cards" class="cards research-cards"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT — populated from site-content.json -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-meta">
+        <div id="about-name" class="about-name">Kurt Rowley, PhD</div>
+        <div id="about-role" class="about-role">Systems scientist · Medical researcher · Instructional designer</div>
+        <div id="about-tags" class="tags"></div>
+      </div>
+      <div class="about-text">
+        <h2 id="about-heading">About the Practice</h2>
+        <div id="about-paragraphs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE LINK — thin strip, populated from site-content.json -->
+  <div id="tools-strip" class="tools-strip"></div>
+
+  <!-- CONTACT — populated from site-content.json -->
+  <section class="contact" id="contact">
+    <div id="contact-section-label" class="section-label">Contact</div>
+    <h2 id="contact-section-title" class="section-title">Get in touch</h2>
+    <p id="contact-section-intro" class="section-intro"></p>
+    <div id="contact-grid" class="contact-grid"></div>
+  </section>
+
+  <!-- FOOTER — populated from site-content.json -->
+  <footer>
+    <div id="footer-brand" class="footer-brand">Nonlinear Systemics</div>
+    <div id="footer-copy" class="footer-copy"></div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
