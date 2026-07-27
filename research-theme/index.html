@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt Rowley, PhD — Systems Scientist</title>
+  <meta name="description" content="Research in applied complex systems science across health, learning, and civilizational systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CONTENT VIEW — full-page overlay for reading articles -->
+  <div id="content-view">
+    <div class="cv-bar">
+      <a href="#" id="back-btn">← Back</a>
+    </div>
+    <div id="content-body"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Kurt Rowley, PhD</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-name">Kurt Rowley, PhD</div>
+      <div class="masthead-title" id="masthead-title">Systems Scientist · Medical Researcher · Instructional Designer</div>
+      <div class="masthead-focus">
+        Complex systems science applied to health, learning, and civilizational dynamics
+      </div>
+      <div class="masthead-links">
+        <a href="#publications">Publications</a>
+        <span class="sep">·</span>
+        <a href="#research">Research Programs</a>
+        <span class="sep">·</span>
+        <a href="#about">About</a>
+        <span class="sep">·</span>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- RECENT PUBLICATIONS -->
+  <section class="pubs-section" id="publications">
+    <div class="section-inner">
+      <h2 class="section-heading">Publications</h2>
+      <div id="pub-list" class="pub-list"></div>
+      <div class="pub-browse-row">
+        <a href="#publications/articles" class="text-link" data-content-link>All articles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH PROGRAMS -->
+  <section class="research-section" id="research">
+    <div class="section-inner">
+      <h2 class="section-heading">Research Programs</h2>
+      <p class="section-intro" id="research-intro"></p>
+      <div id="research-list" class="research-list"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-bio">
+        <h2 class="section-heading">About</h2>
+        <div id="about-paragraphs"></div>
+        <div id="about-tags" class="about-tags"></div>
+      </div>
+      <div class="about-sidebar">
+        <div class="sidebar-block">
+          <div class="sidebar-label">Research Areas</div>
+          <div id="sidebar-tags"></div>
+        </div>
+        <div class="sidebar-block" id="contact-sidebar">
+          <div class="sidebar-label">Contact</div>
+          <div id="contact-email-sidebar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <h2 class="section-heading">Contact</h2>
+      <p id="contact-intro" class="section-intro"></p>
+      <div id="contact-list" class="contact-list"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span id="footer-copy"></span>
+    </div>
+  </footer>
+
+  <script type="module" src="/research-theme/main.ts"></script>
+</body>
+</html>
