@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nonlinear Systemics is now part of ISRD</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://isrd.com/">
+<meta http-equiv="refresh" content="3; url=https://isrd.com/">
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0e1513; color: #e8efec;
+         font: 18px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; padding: 24px; }
+  main { max-width: 34rem; }
+  h1 { font: 600 1.6rem/1.25 Georgia, serif; margin: 0 0 .6em; }
+  a { color: #4cc2ac; }
+  p { margin: 0 0 1em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Nonlinear Systemics is now part of ISRD</h1>
+  <p>Our research, articles, courses and simulations have a new home at <a href="https://isrd.com/">isrd.com</a>, Interdisciplinary Systems R&amp;D.</p>
+  <p>Taking you there now. <a id="go" href="https://isrd.com/">Continue to isrd.com</a></p>
+</main>
+<script>
+// Old nonlinearsystemics.com addresses looked like /#research/complex_diseases/energy-envelopes.
+// Send each one to the matching page on isrd.com; anything unknown goes to the home page.
+(function () {
+  var HOME = "https://isrd.com";
+  var courses = {
+    "ss101": function (f) { return "ss101-" + f; },
+    "general-systems-theory": function (f) { return "gst-" + f; },
+    "cybernetics": function () { return "cybernetics-overview"; },
+    "complexity-science": function () { return "complexity-science-overview"; },
+    "systems-dynamics": function () { return "systems-dynamics-overview"; },
+    "systems-practice": function () { return "systems-practice-overview"; }
+  };
+  var papers = {
+    "complex_diseases/energy-envelopes": "energy-envelopes",
+    "evolutionary_futurism/overview": "evolutionary-futurism-overview",
+    "human_spiritual_systems/overview": "human-spiritual-systems-overview",
+    "systems_science_update/attractor-engineering-framework": "attractor-engineering-framework",
+    "systems_science_update/isrd-background-research": "isrd-background-research"
+  };
+  var programs = {
+    "complex_diseases": "/research/bio-systemics/",
+    "evolutionary_futurism": "/research/global-futurism/",
+    "human_spiritual_systems": "/research/papers/human-spiritual-systems-overview/",
+    "reader_first_writing_system": "/research/reader-first-writing-system/",
+    "systems_science_update": "/research/"
+  };
+
+  function target() {
+    var path = location.pathname;
+    if (/^\/reader-first-app\b/.test(path)) return "https://writer.isrd.com/";
+    var h = location.hash.replace(/^#\/?/, "").replace(/\/+$/, "");
+    if (!h) return HOME + "/";
+    var p = h.split("/"), m;
+    if (p[0] === "about" || p[0] === "contact") return HOME + "/about/";
+    if (p[0] === "publications") {
+      if (p[1] === "articles" && p[2]) return HOME + "/articles/" + p[2] + "/";
+      if (p[1] === "courses") {
+        if (p[2] && courses[p[2]]) return HOME + "/courses/" + courses[p[2]](p[3] || "overview") + "/";
+        return HOME + "/courses/";
+      }
+      return HOME + "/articles/";
+    }
+    if (p[0] === "research") {
+      var key = p[1] + "/" + p[2];
+      if (p[1] === "systems_science_update" && p[2] === "research") return HOME + "/research/methodology-and-publications/";
+      if (papers[key]) return HOME + "/research/papers/" + papers[key] + "/";
+      if (programs[p[1]]) return HOME + programs[p[1]];
+      return HOME + "/research/";
+    }
+    return HOME + "/";
+  }
+
+  var to = target();
+  document.getElementById("go").href = to;
+  location.replace(to);
+})();
+</script>
+</body>
+</html>
